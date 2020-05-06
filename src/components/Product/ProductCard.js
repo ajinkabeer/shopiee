@@ -1,8 +1,23 @@
 import React from "react";
 import { Card, Image, Button } from "semantic-ui-react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { addToCart } from "../../redux/actions/products";
 
 const ProductCard = ({ id, photos, brand, category, price }) => {
+  const dispatch = useDispatch();
+
+  const addItemsToCart = () => {
+    const product = {
+      id,
+      photos,
+      brand,
+      category,
+      price,
+    };
+    dispatch(addToCart(product));
+  };
+
   return (
     <Card>
       <Image src={photos[0]} size="small" wrapped ui={false} />
@@ -26,7 +41,7 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
             </Button>
           </Link>
 
-          <Button basic color="red">
+          <Button basic color="red" onClick={() => addItemsToCart()}>
             Add to cart
           </Button>
         </div>

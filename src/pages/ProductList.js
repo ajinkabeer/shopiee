@@ -3,7 +3,7 @@ import { ProductCard } from "../components/Product/ProductCard";
 import { Card } from "semantic-ui-react";
 import { useSelector } from "react-redux";
 
-function ProductList() {
+const ProductList = () => {
   const products = useSelector((state) => state.products.products);
 
   if (!products) {
@@ -28,6 +28,6 @@ function ProductList() {
       <Card.Group itemsPerRow={5}>{renderProductCard}</Card.Group>
     </>
   );
-}
+};
 
 export { ProductList };
