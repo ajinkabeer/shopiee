@@ -1,25 +1,19 @@
 import React from "react";
-import { Card, Icon, Image } from "semantic-ui-react";
-import data from "../../data/products.json";
+import { Card, Image } from "semantic-ui-react";
 
-const ProductCard = () => {
-  return data.map((product) => (
-    <Card
-      raised
-      href={() => {
-        "";
-      }}
-    >
-      <Image src={product.photos[0]} size="small" wrapped ui={false} />
+const ProductCard = ({ photos, brand, category, price }) => {
+  return (
+    <Card>
+      <Image src={photos[0]} size="small" wrapped ui={false} />
       <Card.Content>
-        <Card.Header>{product.brand}</Card.Header>
+        <Card.Header>{brand}</Card.Header>
         <Card.Meta>
-          <span className="date">{product.category}</span>
+          <span className="date">{category}</span>
         </Card.Meta>
-        <Card.Description>Rs. {product.price}</Card.Description>
+        <Card.Description>Rs. {price}</Card.Description>
       </Card.Content>
     </Card>
-  ));
+  );
 };
 
 export { ProductCard };
