@@ -39,7 +39,7 @@ function App() {
             <Route path="/complete" component={OrderCompleted} />
           </Container>
         </main>
-        <ToastContainer autoClose={3000} hideProgressBar />
+        <ToastContainer autoClose={1000} hideProgressBar />
       </div>
     </>
   );

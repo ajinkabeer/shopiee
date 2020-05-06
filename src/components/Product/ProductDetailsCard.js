@@ -1,6 +1,5 @@
 import React from "react";
 import { Image, Grid } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 
 const ProductDetailsCard = ({ photos }) => {
   return (
