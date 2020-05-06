@@ -1,5 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { ProductCard } from "../components/Product/ProductCard";
+import { Card } from "semantic-ui-react";
 
-const ProductList = () => <h1>Product List</h1>;
+function ProductList() {
+  return (
+    <>
+      <Card.Group itemsPerRow={5}>
+        <ProductCard />
+      </Card.Group>
+    </>
+  );
+}
 
 export { ProductList };

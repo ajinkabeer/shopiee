@@ -1,5 +1,5 @@
 import React from "react";
 
-const ProductDetails = () => <h1>Product Details</h1>;
+const ProductDetails = () => <p>Product Details</p>;
 
 export { ProductDetails };

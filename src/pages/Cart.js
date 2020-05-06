@@ -1,5 +1,5 @@
 import React from "react";
 
-const Cart = () => <h1>Cart</h1>;
+const Cart = () => <p>Cart</p>;
 
 export { Cart };
