@@ -1,17 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ProductCard } from "../components/Product/ProductCard";
 import { Card } from "semantic-ui-react";
-import { useSelector, useDispatch } from "react-redux";
-import { addData } from "../redux/actions/products";
-import { data } from "../data/products";
+import { useSelector } from "react-redux";
 
 function ProductList() {
   const products = useSelector((state) => state.products.products);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(addData(data));
-  }, []);
 
   if (!products) {
     return "Loading..";
@@ -21,6 +14,7 @@ function ProductList() {
     return (
       <ProductCard
         key={product.id}
+        id={product.id}
         photos={product.photos}
         brand={product.brand}
         category={product.category}
