@@ -1,11 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { CartItems } from "../components/Cart/CartItems";
-import { Segment } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 import { Headers } from "../components/Cart/Headers";
 import Message from "../components/Message";
 
-const Cart = () => {
+const Cart = (props) => {
   const cart = useSelector((state) => state.products.cart);
 
   const totalAmount =
@@ -16,15 +16,24 @@ const Cart = () => {
           .reduce((prev, next) => prev + next)
           .toLocaleString();
 
+  if (cart.length === 0) {
+    return (
+      <>
+        <Message message={"There's nothing in your cart."} />
+        <Button onClick={() => props.history.push("/")}>All products</Button>
+      </>
+    );
+  }
+
   return (
     <>
-      <Segment padded="very">
+      <>
         <Message message={"You are eligible for a discount"} />
         <Headers amount={totalAmount} cart={cart} />
         <br />
         <br />
         <CartItems cart={cart} />
-      </Segment>
+      </>
     </>
   );
 };

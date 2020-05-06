@@ -1,7 +1,7 @@
 export const data = [
   {
     id: 1,
-    brand: "HIGHLANDER",
+    brand: "Highlander",
     category: "Casual Shirt",
     price: 2544,
     photos: [
@@ -78,7 +78,7 @@ export const data = [
   },
   {
     id: 8,
-    brand: "HIGHLANDER",
+    brand: "Highlander",
     category: "Casual Shirt",
     price: 225,
     photos: [

@@ -25,7 +25,9 @@ const ProductList = () => {
 
   return (
     <>
-      <Card.Group itemsPerRow={5}>{renderProductCard}</Card.Group>
+      <Card.Group itemsPerRow={window.innerWidth <= 780 ? 1 : 5}>
+        {renderProductCard}
+      </Card.Group>
     </>
   );
 };

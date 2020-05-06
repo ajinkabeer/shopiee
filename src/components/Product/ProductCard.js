@@ -17,7 +17,7 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
       price,
     };
     dispatch(addToCart(product));
-    toast.success(`Added ${brand} to cart`);
+    toast(`Added ${brand} to cart`);
   };
 
   return (
@@ -28,7 +28,7 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
         <Card.Meta>
           <span className="date">{category}</span>
         </Card.Meta>
-        <Card.Description>Rs. {price}</Card.Description>
+        <Card.Description>Rs. {price.toLocaleString()}</Card.Description>
       </Card.Content>
       <Card.Content>
         <div className="ui two buttons">
@@ -38,13 +38,11 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
               id,
             }}
           >
-            <Button basic color="green">
-              View details
-            </Button>
+            <Button basic>View</Button>
           </Link>
 
-          <Button basic color="red" onClick={() => addItemsToCart()}>
-            Add to cart
+          <Button basic onClick={() => addItemsToCart()}>
+            Add
           </Button>
         </div>
       </Card.Content>

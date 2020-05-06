@@ -20,7 +20,7 @@ const Navigation = () => {
 
           <li>
             <NavLink to="/cart">Cart</NavLink>
-            <Label color="white" size="mini">
+            <Label color="grey" size="mini">
               {cart.length}
             </Label>
           </li>
