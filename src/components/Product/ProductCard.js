@@ -3,6 +3,7 @@ import { Card, Image, Button } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../redux/actions/products";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ id, photos, brand, category, price }) => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
       price,
     };
     dispatch(addToCart(product));
+    toast.success(`Added ${brand} to cart`);
   };
 
   return (

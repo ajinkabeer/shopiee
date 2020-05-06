@@ -11,6 +11,8 @@ import { Container } from "semantic-ui-react";
 import { addData } from "./redux/actions/products";
 import { data } from "./data/products";
 import "./css/app.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +39,7 @@ function App() {
             <Route path="/complete" component={OrderCompleted} />
           </Container>
         </main>
+        <ToastContainer autoClose={3000} hideProgressBar />
       </div>
     </>
   );

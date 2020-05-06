@@ -2,6 +2,7 @@ import React from "react";
 import { ProductCard } from "../components/Product/ProductCard";
 import { Card } from "semantic-ui-react";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const ProductList = () => {
   const products = useSelector((state) => state.products.products);
