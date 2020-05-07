@@ -9,13 +9,14 @@ import { ProductDescription } from "../components/Cart/ProductDescription";
 const Cart = (props) => {
   const cart = useSelector((state) => state.products.cart);
 
-  const totalAmount =
+  let totalAmount =
     cart.length === 0
       ? null
       : cart
           .map((product) => product.price)
-          .reduce((prev, next) => prev + next)
-          .toLocaleString();
+          .reduce((prev, next) => prev + next);
+
+  const quantity = cart.map((product) => product.quantity);
 
   if (cart.length === 0) {
     return (
@@ -34,7 +35,7 @@ const Cart = (props) => {
     <Grid columns={2} divided>
       <Grid.Row>
         <Grid.Column>
-          <Headers amount={totalAmount} cart={cart} />
+          <Headers amount={totalAmount} quantity={quantity} cart={cart} />
           <br />
           <br />
           <CartItems cart={cart} />
@@ -44,6 +45,7 @@ const Cart = (props) => {
           <ProductDescription
             totalAmount={totalAmount}
             onButtonClick={() => onButtonClick()}
+            quantity={quantity}
           />
         </Grid.Column>
       </Grid.Row>

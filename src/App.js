@@ -6,13 +6,13 @@ import { ProductList } from "./pages/ProductList";
 import { ProductDetails } from "./pages/ProductDetails";
 import { Cart } from "./pages/Cart";
 import { OrderCompleted } from "./pages/OrderCompleted";
-import { Container } from "semantic-ui-react";
-
 import { addData } from "./redux/actions/products";
+
+import { Container } from "semantic-ui-react";
 import { data } from "./data/products";
-import "./css/app.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./css/app.css";
 
 function App() {
   const dispatch = useDispatch();

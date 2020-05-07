@@ -12,6 +12,14 @@ export function removeFromCart(data) {
   return { type: types.REMOVE_FROM_CART, payload: data };
 }
 
+export function addOrderQuantity(data) {
+  return { type: types.ADD_ORDER_QUANTITY, payload: data };
+}
+
+export function reduceOrderQuantity(data) {
+  return { type: types.REDUCE_ORDER_QUANTITY, payload: data };
+}
+
 export function emptyCart(data) {
   return { type: types.EMPTY_CART, payload: data };
 }

@@ -3,6 +3,7 @@ import * as types from "../constants";
 const initialState = {
   products: "",
   cart: [],
+  quantity: [],
 };
 
 export default function authorReducer(state = initialState, action) {
@@ -16,6 +17,12 @@ export default function authorReducer(state = initialState, action) {
       return {
         ...state,
         cart: [...state.cart, action.payload],
+      };
+
+    case types.ADD_ORDER_QUANTITY:
+      return {
+        ...state,
+        quantity: action.payload,
       };
 
     case types.REMOVE_FROM_CART:

@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import "./css/global.css";
-import * as serviceWorker from "./serviceWorker";
-
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import App from "./App";
 import rootReducer from "./redux/reducers";
+import * as serviceWorker from "./serviceWorker";
+import "./css/global.css";
 
 const store = createStore(rootReducer);
 

@@ -5,7 +5,7 @@ const ProductDetailsCard = ({ photos }) => {
   return (
     <>
       <Grid divided="vertically">
-        <Grid.Row columns={3}>
+        <Grid.Row columns={2}>
           <Grid.Column>
             <Image src={photos[0]} />
           </Grid.Column>
@@ -14,6 +14,9 @@ const ProductDetailsCard = ({ photos }) => {
           </Grid.Column>
           <Grid.Column>
             <Image src={photos[2]} />
+          </Grid.Column>
+          <Grid.Column>
+            <Image src={photos[3]} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

@@ -3,7 +3,7 @@ import { Button, Image, List } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../redux/actions/products";
 
-const CartItemList = ({ id, brand, photos, price }) => {
+const CartItemList = ({ id, brand, photos, price, quantity }) => {
   const dispatch = useDispatch();
 
   const removeItem = () => {
@@ -17,7 +17,9 @@ const CartItemList = ({ id, brand, photos, price }) => {
           <Button onClick={() => removeItem()}>Remove</Button>
         </List.Content>
         <Image src={photos[0]} size="tiny" />
-        <List.Content>{brand}</List.Content>
+        <List.Content>
+          {brand}, {quantity} units
+        </List.Content>
       </List.Item>
     </List>
   );
