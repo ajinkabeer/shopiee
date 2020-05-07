@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     dispatch(addData(data));
-  }, []);
+  });
 
   const products = useSelector((state) => state.products.products);
 

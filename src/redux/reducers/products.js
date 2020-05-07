@@ -17,7 +17,7 @@ export default function authorReducer(state = initialState, action) {
       const index = findIndex(state.cart, action.payload.id);
       let newCart =
         index >= 0
-          ? updateOrderQuantity(state.cart, action.payload)
+          ? updateOrderQuantity(state.cart, action.payload, action.type)
           : [...state.cart, action.payload];
       return {
         ...state,
@@ -28,7 +28,7 @@ export default function authorReducer(state = initialState, action) {
       const index2 = findIndex(state.cart, action.payload.id);
       let newCart2 =
         index2 >= 0
-          ? reduceOrderQuantity(state.cart, action.payload)
+          ? updateOrderQuantity(state.cart, action.payload, action.type)
           : [...state.cart, action.payload];
       return {
         ...state,
@@ -59,26 +59,23 @@ const findIndex = (cart, id) => {
   return cart.findIndex((product) => product.id === id);
 };
 
-const updateOrderQuantity = (cart, product) => {
+const updateOrderQuantity = (cart, product, type) => {
   const index = findIndex(cart, product.id);
   const newCart = [...cart];
   const existingProduct = newCart[index];
-  const updateQuantity = {
-    ...existingProduct,
-    quantity: existingProduct.quantity + product.quantity,
-  };
-  newCart[index] = updateQuantity;
-  return newCart;
-};
+  let updateQuantity = {};
+  if (type === types.ADD_TO_CART) {
+    updateQuantity = {
+      ...existingProduct,
+      quantity: existingProduct.quantity + product.quantity,
+    };
+  } else {
+    updateQuantity = {
+      ...existingProduct,
+      quantity: existingProduct.quantity - 1,
+    };
+  }
 
-const reduceOrderQuantity = (cart, product) => {
-  const index = findIndex(cart, product.id);
-  const newCart = [...cart];
-  const existingProduct = newCart[index];
-  const updateQuantity = {
-    ...existingProduct,
-    quantity: existingProduct.quantity - 1,
-  };
   newCart[index] = updateQuantity;
   return newCart;
 };
