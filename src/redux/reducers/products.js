@@ -7,13 +7,14 @@ const initialState = {
 
 export default function authorReducer(state = initialState, action) {
   switch (action.type) {
-    case types.ADD_DATA:
+    case types.ADD_DATA: {
       return {
         ...state,
         products: action.payload,
       };
+    }
 
-    case types.ADD_TO_CART:
+    case types.ADD_TO_CART: {
       const index = findIndex(state.cart, action.payload.id);
       let newCart =
         index >= 0
@@ -23,19 +24,21 @@ export default function authorReducer(state = initialState, action) {
         ...state,
         cart: newCart,
       };
+    }
 
-    case types.REDUCE_ORDER_QUANTITY:
-      const index2 = findIndex(state.cart, action.payload.id);
-      let newCart2 =
-        index2 >= 0
+    case types.REDUCE_ORDER_QUANTITY: {
+      const index = findIndex(state.cart, action.payload.id);
+      let newCart =
+        index >= 0
           ? updateOrderQuantity(state.cart, action.payload, action.type)
           : [...state.cart, action.payload];
       return {
         ...state,
-        cart: newCart2,
+        cart: newCart,
       };
+    }
 
-    case types.REMOVE_FROM_CART:
+    case types.REMOVE_FROM_CART: {
       const filteredCart = state.cart.filter(
         (product) => product.id !== action.payload
       );
@@ -43,12 +46,14 @@ export default function authorReducer(state = initialState, action) {
         ...state,
         cart: filteredCart,
       };
+    }
 
-    case types.EMPTY_CART:
+    case types.EMPTY_CART: {
       return {
         ...state,
         cart: [],
       };
+    }
 
     default:
       return state;
