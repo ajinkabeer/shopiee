@@ -1,8 +1,26 @@
 import React from "react";
 import { Card, Image, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/actions/products";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ id, photos, brand, category, price }) => {
+  const dispatch = useDispatch();
+
+  const addItemsToCart = () => {
+    const product = {
+      id,
+      photos,
+      brand,
+      category,
+      price,
+      quantity: 1,
+    };
+    dispatch(addToCart(product));
+    toast(`Added ${brand} to cart`);
+  };
+
   return (
     <Card>
       <Image src={photos[0]} size="small" wrapped ui={false} />
@@ -14,16 +32,18 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
         <Card.Description>Rs. {price.toLocaleString()}</Card.Description>
       </Card.Content>
       <Card.Content>
-        <Link
-          to={{
-            pathname: `/details/${id}`,
-            id,
-          }}
-        >
-          <Button basic fluid>
-            View
-          </Button>
-        </Link>
+        <Button.Group size="large">
+          <Link
+            to={{
+              pathname: `/details/${id}`,
+              id,
+            }}
+          >
+            <Button>View</Button>
+          </Link>
+          <Button.Or />
+          <Button onClick={() => addItemsToCart()}>Add</Button>
+        </Button.Group>{" "}
       </Card.Content>
     </Card>
   );

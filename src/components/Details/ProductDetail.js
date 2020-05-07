@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { List, Button, Header, Divider } from "semantic-ui-react";
+import { Button, Header, Divider } from "semantic-ui-react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addOrderQuantity } from "../../redux/actions/products";
 import { toast } from "react-toastify";
 
 const ProductDetail = ({ id, photos, brand, price, category }) => {
   let [quantity, setQuantity] = useState(1);
-  const currentQuantity = useSelector((state) => state.products.quantity);
   const dispatch = useDispatch();
 
   const addItemsToCart = () => {
@@ -30,8 +29,6 @@ const ProductDetail = ({ id, photos, brand, price, category }) => {
     };
     dispatch(addOrderQuantity(quantit));
   };
-
-  console.log("Current", currentQuantity);
 
   return (
     <>
