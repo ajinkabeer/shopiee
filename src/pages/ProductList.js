@@ -27,8 +27,13 @@ const ProductList = () => {
     <Grid columns={2} divided>
       <Grid.Row>
         <Grid.Column mobile={16} tablet={8} computer={16}>
-          <Card.Group mobile={16} tablet={8} computer={16} itemsPerRow={4}>
-            {renderProductCard}
+          <Card.Group
+            mobile={16}
+            tablet={8}
+            computer={16}
+            itemsPerRow={window.innerWidth <= 780 ? 1 : 4}
+          >
+            >{renderProductCard}
           </Card.Group>
         </Grid.Column>
       </Grid.Row>

@@ -56,6 +56,7 @@ export const data = [
       "https://i.ibb.co/rxxzn75/wrogn1.jpg",
       "https://i.ibb.co/yPQ0HT6/wrogn2.jpg",
       "https://i.ibb.co/G7SXMBH/wrogn3.jpg",
+      "https://i.ibb.co/rxxzn75/wrogn1.jpg",
     ],
   },
   {

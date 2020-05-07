@@ -8,8 +8,6 @@ const CartItems = () => {
     return "Loading..";
   }
 
-  console.log(cart);
-
   const renderCartItems = cart.map((product) => {
     return (
       <CartItemList
