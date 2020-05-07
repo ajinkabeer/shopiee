@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
 import { toast } from "react-toastify";
 
-const ProductCard = ({ id, photos, brand, category, price }) => {
+const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
   const dispatch = useDispatch();
 
   const addItemsToCart = () => {
@@ -15,7 +15,7 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
       brand,
       category,
       price,
-      quantity: 1,
+      quantity,
     };
     dispatch(addToCart(product));
     toast(`Added ${brand} to cart`);

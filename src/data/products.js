@@ -4,6 +4,7 @@ export const data = [
     brand: "Highlander",
     category: "Casual Shirt",
     price: 455,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/jgrCgdq/highlander1.jpg",
       "https://i.ibb.co/5F8wVbD/highlander2.jpg",
@@ -16,6 +17,7 @@ export const data = [
     brand: "Nautica",
     category: "Casual Shirt",
     price: 580,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/ch6PHT3/nautica1.jpg",
       "https://i.ibb.co/KjGgBnf/nautica2.jpg",
@@ -28,6 +30,7 @@ export const data = [
     brand: "HRX",
     category: "T-Shirt",
     price: 365,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/3TSTWSZ/hrx1.jpg",
       "https://i.ibb.co/56ztwdy/hrx2.jpg",
@@ -40,6 +43,7 @@ export const data = [
     brand: "Calvin",
     category: "T-Shirt",
     price: 245,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/MS9YHjD/calvin1.jpg",
       "https://i.ibb.co/XVzvYkb/calvin2.jpg",
@@ -52,6 +56,7 @@ export const data = [
     brand: "Wrogn",
     category: "Casual Tshirt",
     price: 545,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/rxxzn75/wrogn1.jpg",
       "https://i.ibb.co/yPQ0HT6/wrogn2.jpg",
@@ -64,6 +69,7 @@ export const data = [
     brand: "Highlander",
     category: "Casual Shirt",
     price: 455,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/jgrCgdq/highlander1.jpg",
       "https://i.ibb.co/5F8wVbD/highlander2.jpg",
@@ -76,6 +82,7 @@ export const data = [
     brand: "Nautica",
     category: "Casual Shirt",
     price: 580,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/ch6PHT3/nautica1.jpg",
       "https://i.ibb.co/KjGgBnf/nautica2.jpg",
@@ -88,6 +95,7 @@ export const data = [
     brand: "HRX",
     category: "T-Shirt",
     price: 365,
+    quantity: 1,
     photos: [
       "https://i.ibb.co/3TSTWSZ/hrx1.jpg",
       "https://i.ibb.co/56ztwdy/hrx2.jpg",

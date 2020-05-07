@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Header, Divider } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
-import { addToCart, addOrderQuantity } from "../../redux/actions/products";
+import { addToCart } from "../../redux/actions/products";
 import { toast } from "react-toastify";
 
 const ProductDetail = ({ id, photos, brand, price, category }) => {
@@ -21,15 +21,6 @@ const ProductDetail = ({ id, photos, brand, price, category }) => {
     toast(`Added ${brand} to cart`);
   };
 
-  const addOrderQuanty = () => {
-    setQuantity(quantity + 1);
-    const quantit = {
-      id,
-      quantity,
-    };
-    dispatch(addOrderQuantity(quantit));
-  };
-
   return (
     <>
       <Header as="h2">{brand}</Header>
@@ -38,7 +29,7 @@ const ProductDetail = ({ id, photos, brand, price, category }) => {
       <Header as="h2">Rs. {price}</Header>
       <Header as="h3">Quantity {quantity}</Header>
       <Button.Group>
-        <Button fluid onClick={() => addOrderQuanty()}>
+        <Button fluid onClick={() => setQuantity(quantity + 1)}>
           Add
         </Button>
         <Button.Or />

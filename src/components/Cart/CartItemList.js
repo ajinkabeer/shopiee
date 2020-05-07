@@ -3,7 +3,7 @@ import { Button, Image, List } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../redux/actions/products";
 
-const CartItemList = ({ id, brand, photos, price, quantity }) => {
+const CartItemList = ({ id, brand, photos, quantity }) => {
   const dispatch = useDispatch();
 
   const removeItem = () => {
