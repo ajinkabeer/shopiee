@@ -22,7 +22,7 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
   };
 
   return (
-    <Card>
+    <Card raised>
       <Image src={photos[0]} size="small" wrapped ui={false} />
       <Card.Content>
         <Card.Header>{brand}</Card.Header>
@@ -32,15 +32,18 @@ const ProductCard = ({ id, photos, brand, category, price }) => {
         <Card.Description>Rs. {price.toLocaleString()}</Card.Description>
       </Card.Content>
       <Card.Content>
-        <Button.Group size="large">
-          <Link
-            to={{
-              pathname: `/details/${id}`,
-              id,
-            }}
-          >
-            <Button>View</Button>
-          </Link>
+        <Button.Group widths="2">
+          <Button>
+            <Link
+              to={{
+                pathname: `/details/${id}`,
+                id,
+              }}
+            >
+              View
+            </Link>
+          </Button>
+
           <Button.Or />
           <Button onClick={() => addItemsToCart()}>Add</Button>
         </Button.Group>{" "}

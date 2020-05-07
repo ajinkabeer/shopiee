@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductCard } from "../components/Product/ProductCard";
-import { Card } from "semantic-ui-react";
+import { Card, Grid } from "semantic-ui-react";
 import { useSelector } from "react-redux";
 
 const ProductList = () => {
@@ -24,11 +24,15 @@ const ProductList = () => {
   });
 
   return (
-    <>
-      <Card.Group itemsPerRow={window.innerWidth <= 780 ? 1 : 5}>
-        {renderProductCard}
-      </Card.Group>
-    </>
+    <Grid columns={2} divided>
+      <Grid.Row>
+        <Grid.Column mobile={16} tablet={8} computer={16}>
+          <Card.Group mobile={16} tablet={8} computer={16} itemsPerRow={4}>
+            {renderProductCard}
+          </Card.Group>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
   );
 };
 

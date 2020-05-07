@@ -5,8 +5,6 @@ import { useSelector } from "react-redux";
 import "./Navigation.css";
 
 const Navigation = () => {
-  const cart = useSelector((state) => state.products.cart);
-
   return (
     <header className="main-navigation">
       <div className="main-navigation-logo">
@@ -20,9 +18,6 @@ const Navigation = () => {
 
           <li>
             <NavLink to="/cart">Cart</NavLink>
-            <Label color="grey" size="mini">
-              {cart.length}
-            </Label>
           </li>
         </ul>
       </nav>

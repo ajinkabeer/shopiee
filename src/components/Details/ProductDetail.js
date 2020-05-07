@@ -38,9 +38,12 @@ const ProductDetail = ({ id, photos, brand, price, category }) => {
       <Header as="h2">Rs. {price}</Header>
       <Header as="h3">Quantity {quantity}</Header>
       <Button.Group>
-        <Button onClick={() => addOrderQuanty()}>Add</Button>
+        <Button fluid onClick={() => addOrderQuanty()}>
+          Add
+        </Button>
         <Button.Or />
         <Button
+          fluid
           onClick={() => (quantity >= 2 ? setQuantity(quantity - 1) : null)}
         >
           Remove

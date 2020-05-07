@@ -14,10 +14,14 @@ export default function authorReducer(state = initialState, action) {
         products: action.payload,
       };
     case types.ADD_TO_CART:
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
-      };
+      const index = state.cart.findIndex(
+        (product) => product.id === action.payload.id
+      );
+      if (index === -1) {
+        state.cart.push(action.payload);
+      } else {
+        state.cart[index] = action.payload;
+      }
 
     case types.ADD_ORDER_QUANTITY:
       return {

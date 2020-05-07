@@ -34,13 +34,13 @@ const Cart = (props) => {
   return (
     <Grid columns={2} divided>
       <Grid.Row>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
           <Headers amount={totalAmount} quantity={quantity} cart={cart} />
           <br />
           <br />
           <CartItems cart={cart} />
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
           <Message message={"You are eligible for a discount"} />
           <ProductDescription
             totalAmount={totalAmount}

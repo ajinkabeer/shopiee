@@ -11,8 +11,6 @@ const ProductDetails = ({ match }) => {
     state.products.products.filter((product) => product.id === slug)
   );
 
-  console.log("PPR", products);
-
   if (!products) {
     return "Loading..";
   }
@@ -30,10 +28,10 @@ const ProductDetails = ({ match }) => {
   return (
     <Grid divided="vertically">
       <Grid.Row columns={2}>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
           <Card.Group itemsPerRow={5}>{renderProductDetailsCard}</Card.Group>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={8} computer={8}>
           <ProductDetail
             key={products[0].id}
             photos={products[0].photos}
