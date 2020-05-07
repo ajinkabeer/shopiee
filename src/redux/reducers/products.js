@@ -12,16 +12,27 @@ export default function authorReducer(state = initialState, action) {
         ...state,
         products: action.payload,
       };
+
     case types.ADD_TO_CART:
       const index = findIndex(state.cart, action.payload.id);
       let newCart =
         index >= 0
           ? updateOrderQuantity(state.cart, action.payload)
           : [...state.cart, action.payload];
-
       return {
         ...state,
         cart: newCart,
+      };
+
+    case types.REDUCE_ORDER_QUANTITY:
+      const index2 = findIndex(state.cart, action.payload.id);
+      let newCart2 =
+        index2 >= 0
+          ? reduceOrderQuantity(state.cart, action.payload)
+          : [...state.cart, action.payload];
+      return {
+        ...state,
+        cart: newCart2,
       };
 
     case types.REMOVE_FROM_CART:
@@ -55,6 +66,18 @@ const updateOrderQuantity = (cart, product) => {
   const updateQuantity = {
     ...existingProduct,
     quantity: existingProduct.quantity + product.quantity,
+  };
+  newCart[index] = updateQuantity;
+  return newCart;
+};
+
+const reduceOrderQuantity = (cart, product) => {
+  const index = findIndex(cart, product.id);
+  const newCart = [...cart];
+  const existingProduct = newCart[index];
+  const updateQuantity = {
+    ...existingProduct,
+    quantity: existingProduct.quantity - 1,
   };
   newCart[index] = updateQuantity;
   return newCart;
