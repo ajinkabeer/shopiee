@@ -13,5 +13,6 @@ export function removeFromCart(data) {
 }
 
 export function emptyCart(data) {
+  console.log("EMPTY CART");
   return { type: types.EMPTY_CART, payload: data };
 }

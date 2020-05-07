@@ -24,6 +24,15 @@ export default function authorReducer(state = initialState, action) {
         cart: newCart,
       };
 
+    case types.REMOVE_FROM_CART:
+      const filteredCart = state.cart.filter(
+        (product) => product.id !== action.payload
+      );
+      return {
+        ...state,
+        cart: filteredCart,
+      };
+
     case types.EMPTY_CART:
       return {
         ...state,
