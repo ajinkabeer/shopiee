@@ -26,6 +26,13 @@ export default function authorReducer(state = initialState, action) {
         ...state,
         cart: filteredCart,
       };
+
+    case types.EMPTY_CART:
+      return {
+        ...state,
+        cart: [],
+      };
+
     default:
       return state;
   }

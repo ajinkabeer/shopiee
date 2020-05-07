@@ -11,3 +11,7 @@ export function addToCart(data) {
 export function removeFromCart(data) {
   return { type: types.REMOVE_FROM_CART, payload: data };
 }
+
+export function emptyCart(data) {
+  return { type: types.EMPTY_CART, payload: data };
+}

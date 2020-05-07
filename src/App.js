@@ -36,7 +36,7 @@ function App() {
             <Route exact path="/" component={ProductList} />
             <Route path="/details/:slug" component={ProductDetails} />
             <Route path="/cart" component={Cart} />
-            <Route path="/complete" component={OrderCompleted} />
+            <Route path="/completed" component={OrderCompleted} />
           </Container>
         </main>
         <ToastContainer
