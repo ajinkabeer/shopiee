@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/shopiee/static/css/main.76a3d61b.chunk.css",
-    "main.js": "/shopiee/static/js/main.2a2c358c.chunk.js",
-    "main.js.map": "/shopiee/static/js/main.2a2c358c.chunk.js.map",
-    "runtime-main.js": "/shopiee/static/js/runtime-main.ec81f299.js",
-    "runtime-main.js.map": "/shopiee/static/js/runtime-main.ec81f299.js.map",
-    "static/css/2.f42e59c9.chunk.css": "/shopiee/static/css/2.f42e59c9.chunk.css",
-    "static/js/2.ca8e288a.chunk.js": "/shopiee/static/js/2.ca8e288a.chunk.js",
-    "static/js/2.ca8e288a.chunk.js.map": "/shopiee/static/js/2.ca8e288a.chunk.js.map",
+    "main.js": "/shopiee/static/js/main.0b55a54f.chunk.js",
+    "main.js.map": "/shopiee/static/js/main.0b55a54f.chunk.js.map",
+    "runtime-main.js": "/shopiee/static/js/runtime-main.fdb4f543.js",
+    "runtime-main.js.map": "/shopiee/static/js/runtime-main.fdb4f543.js.map",
+    "static/css/2.f1d36a8f.chunk.css": "/shopiee/static/css/2.f1d36a8f.chunk.css",
+    "static/js/2.0a549a47.chunk.js": "/shopiee/static/js/2.0a549a47.chunk.js",
+    "static/js/2.0a549a47.chunk.js.map": "/shopiee/static/js/2.0a549a47.chunk.js.map",
     "index.html": "/shopiee/index.html",
-    "precache-manifest.c2a35330165f6c9dcc69317bbac44a9d.js": "/shopiee/precache-manifest.c2a35330165f6c9dcc69317bbac44a9d.js",
+    "precache-manifest.f5e442f059fbb098918fbc24fa7891ee.js": "/shopiee/precache-manifest.f5e442f059fbb098918fbc24fa7891ee.js",
     "service-worker.js": "/shopiee/service-worker.js",
-    "static/css/2.f42e59c9.chunk.css.map": "/shopiee/static/css/2.f42e59c9.chunk.css.map",
+    "static/css/2.f1d36a8f.chunk.css.map": "/shopiee/static/css/2.f1d36a8f.chunk.css.map",
     "static/css/main.76a3d61b.chunk.css.map": "/shopiee/static/css/main.76a3d61b.chunk.css.map",
-    "static/js/2.ca8e288a.chunk.js.LICENSE.txt": "/shopiee/static/js/2.ca8e288a.chunk.js.LICENSE.txt"
+    "static/js/2.0a549a47.chunk.js.LICENSE.txt": "/shopiee/static/js/2.0a549a47.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ec81f299.js",
-    "static/css/2.f42e59c9.chunk.css",
-    "static/js/2.ca8e288a.chunk.js",
+    "static/js/runtime-main.fdb4f543.js",
+    "static/css/2.f1d36a8f.chunk.css",
+    "static/js/2.0a549a47.chunk.js",
     "static/css/main.76a3d61b.chunk.css",
-    "static/js/main.2a2c358c.chunk.js"
+    "static/js/main.0b55a54f.chunk.js"
   ]
 }
