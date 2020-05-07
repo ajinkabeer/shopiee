@@ -33,7 +33,7 @@ const ProductList = () => {
             computer={16}
             itemsPerRow={window.innerWidth <= 780 ? 1 : 4}
           >
-            >{renderProductCard}
+            {renderProductCard}
           </Card.Group>
         </Grid.Column>
       </Grid.Row>
