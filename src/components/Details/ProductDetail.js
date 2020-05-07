@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Header, Divider } from "semantic-ui-react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart, addOrderQuantity } from "../../redux/actions/products";
 import { toast } from "react-toastify";
 
