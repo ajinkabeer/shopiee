@@ -1,7 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { ProductCard } from "../components/Product/ProductCard";
 import { Card, Grid } from "semantic-ui-react";
-import { useSelector } from "react-redux";
 
 const ProductList = () => {
   const products = useSelector((state) => state.products.products);

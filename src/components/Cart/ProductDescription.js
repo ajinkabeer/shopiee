@@ -17,7 +17,12 @@ const ProductDescription = ({ onButtonClick }) => {
         <List.Content>Eligible Discount</List.Content>
       </List.Item>
 
-      <Button positive fluid onClick={onButtonClick}>
+      <Button
+        positive
+        fluid
+        onClick={onButtonClick}
+        disabled={totalAmount === 0 ? true : false}
+      >
         Checkout
       </Button>
     </List>

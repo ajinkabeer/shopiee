@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { CartItems } from "../components/Cart/CartItems";
-import { Button, Grid } from "semantic-ui-react";
 import { Headers } from "../components/Cart/Headers";
-import Message from "../components/Message";
 import { ProductDescription } from "../components/Cart/ProductDescription";
+import Message from "../components/Message";
+import { Button, Grid } from "semantic-ui-react";
 
 const Cart = (props) => {
   const cart = useSelector((state) => state.products.cart);
@@ -18,7 +18,6 @@ const Cart = (props) => {
       </>
     );
   }
-
   const onButtonClick = () => {
     props.history.push("/completed");
   };

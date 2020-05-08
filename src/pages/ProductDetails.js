@@ -1,8 +1,8 @@
 import React from "react";
-import { Card, Grid } from "semantic-ui-react";
 import { useSelector } from "react-redux";
 import { ProductDetailsCard } from "../components/Product/ProductDetailsCard";
 import { ProductDetail } from "../components/Details/ProductDetail";
+import { Card, Grid } from "semantic-ui-react";
 
 const ProductDetails = ({ match }) => {
   const slug = Number(match.params.slug);

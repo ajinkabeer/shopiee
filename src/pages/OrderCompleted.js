@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { emptyCart } from "../redux/actions/products";
-import { Header, Button } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
+import { emptyCart } from "../redux/actions/products";
 import { Animation } from "../components/Completed/Animation";
+import { Header, Button } from "semantic-ui-react";
 
 const OrderCompleted = (props) => {
   const dispatch = useDispatch();
