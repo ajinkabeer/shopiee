@@ -27,4 +27,4 @@ File sizes after gzip
 
 ## Deployed
 
-- GitHub Pages
+- GitHub Pages, on branch `gh-pages`
