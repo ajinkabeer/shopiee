@@ -1,8 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Label } from "semantic-ui-react";
 import "./Navigation.css";
 
 const Navigation = () => {
+  const cartItems = useSelector((state) => state.products.cart);
+
   return (
     <header className="main-navigation">
       <div className="main-navigation-logo">
@@ -16,6 +20,7 @@ const Navigation = () => {
 
           <li>
             <NavLink to="/cart">Cart</NavLink>
+            <Label color="brown">{cartItems.length}</Label>
           </li>
         </ul>
       </nav>
