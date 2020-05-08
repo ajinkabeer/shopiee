@@ -8,14 +8,6 @@ import { ProductDescription } from "../components/Cart/ProductDescription";
 
 const Cart = (props) => {
   const cart = useSelector((state) => state.products.cart);
-
-  let totalAmount =
-    cart.length === 0
-      ? null
-      : cart
-          .map((product) => product.price)
-          .reduce((prev, next) => prev + next);
-
   const quantity = cart.map((product) => product.quantity);
 
   if (cart.length === 0) {
@@ -35,7 +27,7 @@ const Cart = (props) => {
     <Grid columns={2} divided>
       <Grid.Row>
         <Grid.Column mobile={16} tablet={8} computer={8}>
-          <Headers amount={totalAmount} quantity={quantity} cart={cart} />
+          <Headers quantity={quantity} cart={cart} />
           <br />
           <br />
           <CartItems cart={cart} />
@@ -43,7 +35,6 @@ const Cart = (props) => {
         <Grid.Column mobile={16} tablet={8} computer={8}>
           <Message message={"You are eligible for a discount"} />
           <ProductDescription
-            totalAmount={totalAmount}
             onButtonClick={() => onButtonClick()}
             quantity={quantity}
           />

@@ -1,15 +1,13 @@
 import React from "react";
 import { List, Button } from "semantic-ui-react";
+import { useSelector } from "react-redux";
 
-const ProductDescription = ({ totalAmount, onButtonClick, quantity }) => {
-  const totalQuantity = quantity.reduce((a, b) => a + b, 0);
-
+const ProductDescription = ({ onButtonClick }) => {
+  const totalAmount = useSelector((state) => state.products.amount);
   return (
     <List divided verticalAlign="middle">
       <List.Item>
-        <List.Content floated="right">
-          Rs. {totalAmount * totalQuantity}
-        </List.Content>
+        <List.Content floated="right">Rs. {totalAmount}</List.Content>
         <List.Content>Total Amount</List.Content>
       </List.Item>
       <List.Item>

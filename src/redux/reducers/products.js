@@ -3,6 +3,7 @@ import * as types from "../constants";
 const initialState = {
   products: "",
   cart: [],
+  amount: "",
 };
 
 export default function authorReducer(state = initialState, action) {
@@ -20,9 +21,11 @@ export default function authorReducer(state = initialState, action) {
         index >= 0
           ? updateOrderQuantity(state.cart, action.payload, action.type)
           : [...state.cart, action.payload];
+      const totalAmount = findTotalAmount(newCart);
       return {
         ...state,
         cart: newCart,
+        amount: totalAmount,
       };
     }
 
@@ -32,9 +35,11 @@ export default function authorReducer(state = initialState, action) {
         index >= 0
           ? updateOrderQuantity(state.cart, action.payload, action.type)
           : [...state.cart, action.payload];
+      const totalAmount = findTotalAmount(newCart);
       return {
         ...state,
         cart: newCart,
+        amount: totalAmount,
       };
     }
 
@@ -83,4 +88,11 @@ const updateOrderQuantity = (cart, product, type) => {
 
   newCart[index] = updateQuantity;
   return newCart;
+};
+
+const findTotalAmount = (cart) => {
+  let total = cart
+    .map((product) => product.price * product.quantity)
+    .reduce((prev, next) => prev + next);
+  return total;
 };
