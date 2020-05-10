@@ -6,6 +6,7 @@ import { ProductDescription } from "../components/Cart/ProductDescription";
 import Message from "../components/Message";
 import { Button, Grid } from "semantic-ui-react";
 import { motion } from "framer-motion";
+import { pageTransition } from "../assets/pageTransition";
 
 const Cart = (props) => {
   const cart = useSelector((state) => state.products.cart);
@@ -24,11 +25,7 @@ const Cart = (props) => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
       <Grid columns={2} divided>
         <Grid.Row>
           <Grid.Column mobile={16} tablet={8} computer={8}>

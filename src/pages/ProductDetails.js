@@ -4,6 +4,7 @@ import { ProductDetailsCard } from "../components/Product/ProductDetailsCard";
 import { ProductDetail } from "../components/Details/ProductDetail";
 import { Card, Grid } from "semantic-ui-react";
 import { motion } from "framer-motion";
+import { pageTransition } from "../assets/pageTransition";
 
 const ProductDetails = ({ match }) => {
   const slug = Number(match.params.slug);
@@ -27,11 +28,7 @@ const ProductDetails = ({ match }) => {
   });
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
       <Grid divided="vertically">
         <Grid.Row columns={2}>
           <Grid.Column mobile={16} tablet={8} computer={8}>
