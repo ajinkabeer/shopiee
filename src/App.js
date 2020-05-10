@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { Navigation } from "./components/Navigation/Navigation";
 import { ProductList } from "./pages/ProductList";
 import { ProductDetails } from "./pages/ProductDetails";
@@ -9,6 +9,7 @@ import { OrderCompleted } from "./pages/OrderCompleted";
 import { addData } from "./redux/actions/products";
 
 import { Container } from "semantic-ui-react";
+import { AnimatePresence } from "framer-motion";
 import { data } from "./data/products";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -33,10 +34,14 @@ function App() {
         <Navigation />
         <main className="main-content">
           <Container>
-            <Route exact path="/" component={ProductList} />
-            <Route path="/details/:slug" component={ProductDetails} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/completed" component={OrderCompleted} />
+            <AnimatePresence>
+              <Switch>
+                <Route exact path="/" component={ProductList} />
+                <Route path="/details/:slug" component={ProductDetails} />
+                <Route path="/cart" component={Cart} />
+                <Route path="/completed" component={OrderCompleted} />
+              </Switch>
+            </AnimatePresence>
           </Container>
         </main>
         <ToastContainer
