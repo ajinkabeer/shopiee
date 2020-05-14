@@ -14,6 +14,8 @@ const Delivery = () => {
     setDisabled(!disabled);
   };
 
+  const onEnter = (event) => event.key === "Enter" && handleClick();
+
   return (
     <>
       <Header as="h4">Delivery Options</Header>
@@ -27,6 +29,7 @@ const Delivery = () => {
         value={input}
         onChange={(e) => inputHandler(e)}
         style={{ marginBottom: 10 }}
+        onKeyPress={(e) => onEnter(e)}
       />
       {disabled && (
         <>

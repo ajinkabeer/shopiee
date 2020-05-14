@@ -5,7 +5,7 @@ const ProductDetailsCard = ({ photos }) => {
   return (
     <>
       <Grid divided="vertically">
-        <Grid.Row columns={2}>
+        <Grid.Row columns={2} style={{ marginTop: 13 }}>
           <Grid.Column>
             <Image src={photos[0]} alt="product-photo-1" />
           </Grid.Column>
