@@ -4,9 +4,13 @@
   "private": true,
   "homepage": "https://ajin.dev/shopiee/",
   "dependencies": {
+    "@chakra-ui/core": "^0.7.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "emotion-theming": "^10.0.27",
     "framer-motion": "^1.10.3",
     "gh-pages": "^2.2.0",
     "react": "^16.13.1",
@@ -17,7 +21,8 @@
     "react-scripts": "3.4.1",
     "react-toastify": "^5.5.0",
     "redux": "^4.0.5",
-    "semantic-ui-react": "^0.88.2"
+    "semantic-ui-react": "^0.88.2",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "predeploy": "yarn run build",
