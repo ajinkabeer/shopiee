@@ -32,7 +32,14 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
           }}
         />
       )}
-      <Image key={id} src={photos[0]} size="small" wrapped ui={false} />
+      <Image
+        key={id}
+        src={photos[0]}
+        size="small"
+        wrapped
+        ui={false}
+        alt={brand}
+      />
       <Card.Content>
         <Card.Header>{brand}</Card.Header>
         <Card.Meta>

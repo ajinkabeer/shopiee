@@ -32,7 +32,7 @@ const CartItemList = ({ id, brand, photos, quantity, size }) => {
           </Button>
           <Button onClick={() => removeItem()}>Remove</Button>
         </List.Content>
-        <Image src={photos[0]} size="tiny" />
+        <Image src={photos[0]} size="tiny" alt={brand} />
         <List.Content>
           {brand}, {quantity} units, {size}
         </List.Content>
