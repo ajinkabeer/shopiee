@@ -10,7 +10,7 @@ const sizes = [
 
 const Sizes = ({ ...props }) => {
   const {
-    selected: [selected, setSelected],
+    selected: [setSelected],
   } = {
     ...props.selected,
   };

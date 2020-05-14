@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Header, Divider } from "semantic-ui-react";
+import { Button, Header, Divider, Segment } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
 import { toast } from "react-toastify";
@@ -30,7 +30,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   };
 
   return (
-    <>
+    <Segment>
       <Header as="h2">{brand}</Header>
       <Header as="h4">{category}</Header>
       <Divider />
@@ -49,13 +49,13 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
         </Button>
       </Button.Group>
       <Header>
-        <Select selected={{ selected: [selected, setSelected] }} />
+        <Select selected={{ selected: [setSelected] }} />
       </Header>
       <Facts />
       <Button positive fluid onClick={() => addItemsToCart()}>
         Add
       </Button>
-    </>
+    </Segment>
   );
 };
 
