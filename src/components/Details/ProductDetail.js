@@ -2,23 +2,29 @@ import React, { useState } from "react";
 import { Button, Header, Divider } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
-import { toast } from "react-toastify";
+import Select from "./Sizes";
+import Facts from "./Facts";
 
 const ProductDetail = ({ id, photos, brand, price, category }) => {
   let [quantity, setQuantity] = useState(1);
+  const [selected, setSelected] = useState(false);
   const dispatch = useDispatch();
 
   const addItemsToCart = () => {
-    const product = {
-      id,
-      photos,
-      brand,
-      category,
-      price,
-      quantity,
-    };
-    dispatch(addToCart(product));
-    toast(`Added ${brand} to cart`);
+    if (!selected) {
+      toast.warning("Please select a size");
+    } else {
+      const product = {
+        id,
+        photos,
+        brand,
+        category,
+        price,
+        quantity,
+      };
+      dispatch(addToCart(product));
+      toast(`Added ${brand} to cart`);
+    }
   };
 
   return (
@@ -40,14 +46,10 @@ const ProductDetail = ({ id, photos, brand, price, category }) => {
           Remove
         </Button>
       </Button.Group>
-      <Header as="h4">Facts</Header>
-
-      <p>100% Original Products</p>
-      <p>Free Delivery on order above Rs. 1199</p>
-      <p>
-        Pay on delivery might be available Easy 30 days returns and exchanges
-        Try & Buy might be available
-      </p>
+      <Header>
+        <Select selected={{ selected: [selected, setSelected] }} />
+      </Header>
+      <Facts />
       <Button positive fluid onClick={() => addItemsToCart()}>
         Add
       </Button>
