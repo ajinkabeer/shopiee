@@ -60,10 +60,10 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
         </Button>
       </Button.Group>
       <Select selected={{ selected: [setSelected] }} />
-      <Facts />
       <Button positive fluid onClick={() => addItemsToCart()}>
         Add
       </Button>
+      <Facts />
     </Segment>
   );
 };
