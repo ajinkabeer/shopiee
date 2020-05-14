@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Label } from "semantic-ui-react";
 import "./Navigation.css";
 
 const Navigation = () => {
@@ -19,8 +18,7 @@ const Navigation = () => {
           </li>
 
           <li>
-            <NavLink to="/cart">Cart</NavLink>
-            <Label>{cartItems.length}</Label>
+            <NavLink to="/cart">Cart [ {cartItems.length} ]</NavLink>
           </li>
         </ul>
       </nav>

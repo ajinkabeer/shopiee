@@ -14,7 +14,7 @@
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 
-.main-navigation-logo h1 {
+.main-navigation-logo h3 {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
@@ -29,6 +29,9 @@
   font-family: "Roboto", sans-serif;
   display: flex;
   list-style: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+
   padding: 0;
   margin: 0;
   align-items: center;

@@ -6,7 +6,7 @@ import { Card, Grid } from "semantic-ui-react";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
 
-const ProductDetails = ({ match }) => {
+const ProductDetails = ({ match, ...props }) => {
   const slug = Number(match.params.slug);
 
   const products = useSelector((state) =>
