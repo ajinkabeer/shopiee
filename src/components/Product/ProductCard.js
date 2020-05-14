@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Image, Button } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
 import { toast } from "react-toastify";
 
 const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
+  const [redirect, setRedirect] = useState(false);
   const dispatch = useDispatch();
 
   const addItemsToCart = () => {
@@ -22,7 +23,15 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
   };
 
   return (
-    <Card raised>
+    <Card raised onClick={() => setRedirect(true)}>
+      {redirect && (
+        <Redirect
+          to={{
+            pathname: `/details/${id}`,
+            id,
+          }}
+        />
+      )}
       <Image src={photos[0]} size="small" wrapped ui={false} />
       <Card.Content>
         <Card.Header>{brand}</Card.Header>
@@ -31,23 +40,8 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
         </Card.Meta>
         <Card.Description>Rs. {price.toLocaleString()}</Card.Description>
       </Card.Content>
-      <Card.Content>
-        <Button.Group widths="2">
-          <Button>
-            <Link
-              to={{
-                pathname: `/details/${id}`,
-                id,
-              }}
-            >
-              View
-            </Link>
-          </Button>
 
-          <Button.Or />
-          <Button onClick={() => addItemsToCart()}>Add</Button>
-        </Button.Group>{" "}
-      </Card.Content>
+      <Button onClick={() => addItemsToCart()}>Add</Button>
     </Card>
   );
 };
