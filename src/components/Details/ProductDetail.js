@@ -5,6 +5,7 @@ import { addToCart } from "../../redux/actions/products";
 import { toast } from "react-toastify";
 import Select from "./Sizes";
 import Facts from "./Facts";
+import Delivery from "./DeliveryOptions";
 
 const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   let [quantity, setQuantity] = useState(1);
@@ -50,9 +51,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
       />
       <br />
       <Button.Group>
-        <Button icon="add" onClick={() => setQuantity(quantity + 1)}>
-          +
-        </Button>
+        <Button onClick={() => setQuantity(quantity + 1)}>+</Button>
         <Button
           onClick={() => (quantity >= 2 ? setQuantity(quantity - 1) : null)}
         >
@@ -63,6 +62,8 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
       <Button positive fluid onClick={() => addItemsToCart()}>
         Add
       </Button>
+      <Delivery />
+
       <Facts />
     </Segment>
   );
