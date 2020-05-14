@@ -24,6 +24,7 @@ const Sizes = ({ ...props }) => {
       placeholder="Select your size"
       options={sizes}
       onChange={handleChange}
+      style={{ marginLeft: 10 }}
     />
   );
 };

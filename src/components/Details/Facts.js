@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "semantic-ui-react";
 
 const Facts = () => (
-  <div>
+  <div style={{ marginTop: 15 }}>
     <Header as="h4">Facts</Header>
     <p>100% Original Products</p>
     <p>Free Delivery on order above Rs. 1199</p>
