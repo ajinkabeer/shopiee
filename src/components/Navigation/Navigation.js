@@ -10,7 +10,7 @@ const Navigation = () => {
   return (
     <header className="main-navigation">
       <div className="main-navigation-logo">
-        <h1>Shopiee</h1>
+        <h3>SHOPIEE</h3>
       </div>
       <nav className="main-navigation-item">
         <ul>
@@ -20,7 +20,7 @@ const Navigation = () => {
 
           <li>
             <NavLink to="/cart">Cart</NavLink>
-            <Label color="brown">{cartItems.length}</Label>
+            <Label>{cartItems.length}</Label>
           </li>
         </ul>
       </nav>

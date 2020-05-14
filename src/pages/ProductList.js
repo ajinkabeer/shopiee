@@ -35,7 +35,7 @@ const ProductList = () => {
               mobile={16}
               tablet={8}
               computer={16}
-              itemsPerRow={window.innerWidth <= 780 ? 1 : 4}
+              itemsPerRow={window.innerWidth <= 780 ? 1 : 5}
             >
               {renderProductCard}
             </Card.Group>
