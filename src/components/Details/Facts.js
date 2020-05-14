@@ -10,6 +10,7 @@ const Facts = () => (
       Pay on delivery might be available Easy 30 days returns and exchanges Try
       & Buy might be available
     </p>
+    <br />
   </div>
 );
 

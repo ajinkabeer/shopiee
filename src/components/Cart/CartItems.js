@@ -18,6 +18,7 @@ const CartItems = () => {
         category={product.category}
         price={product.price}
         quantity={product.quantity}
+        size={product.size}
       />
     );
   });

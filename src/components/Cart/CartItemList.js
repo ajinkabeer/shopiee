@@ -6,7 +6,7 @@ import {
   reduceOrderQuantity,
 } from "../../redux/actions/products";
 
-const CartItemList = ({ id, brand, photos, quantity }) => {
+const CartItemList = ({ id, brand, photos, quantity, size }) => {
   const dispatch = useDispatch();
 
   const reduceQuantity = () => {
@@ -34,7 +34,7 @@ const CartItemList = ({ id, brand, photos, quantity }) => {
         </List.Content>
         <Image src={photos[0]} size="tiny" />
         <List.Content>
-          {brand}, {quantity} units
+          {brand}, {quantity} units, {size}
         </List.Content>
       </List.Item>
     </List>

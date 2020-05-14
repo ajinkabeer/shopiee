@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Button, Header, Divider } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
+import { toast } from "react-toastify";
 import Select from "./Sizes";
 import Facts from "./Facts";
 
-const ProductDetail = ({ id, photos, brand, price, category }) => {
+const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   let [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState(false);
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const ProductDetail = ({ id, photos, brand, price, category }) => {
         category,
         price,
         quantity,
+        size: selected,
       };
       dispatch(addToCart(product));
       toast(`Added ${brand} to cart`);

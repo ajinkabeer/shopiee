@@ -3,6 +3,7 @@ export const data = [
     id: 1,
     brand: "Highlander",
     category: "Casual Shirt",
+    size: "",
     price: 455,
     quantity: 1,
     photos: [
@@ -16,6 +17,7 @@ export const data = [
     id: 2,
     brand: "Nautica",
     category: "Casual Shirt",
+    size: "",
     price: 580,
     quantity: 1,
     photos: [
@@ -29,6 +31,8 @@ export const data = [
     id: 3,
     brand: "HRX",
     category: "T-Shirt",
+    size: "",
+
     price: 365,
     quantity: 1,
     photos: [
@@ -42,6 +46,8 @@ export const data = [
     id: 4,
     brand: "Calvin",
     category: "T-Shirt",
+    size: "",
+
     price: 245,
     quantity: 1,
     photos: [
@@ -55,6 +61,8 @@ export const data = [
     id: 5,
     brand: "Wrogn",
     category: "Casual Tshirt",
+    size: "",
+
     price: 545,
     quantity: 1,
     photos: [
@@ -68,6 +76,8 @@ export const data = [
     id: 6,
     brand: "Highlander",
     category: "Casual Shirt",
+    size: "",
+
     price: 455,
     quantity: 1,
     photos: [
@@ -81,6 +91,8 @@ export const data = [
     id: 7,
     brand: "Nautica",
     category: "Casual Shirt",
+    size: "",
+
     price: 580,
     quantity: 1,
     photos: [
@@ -94,6 +106,8 @@ export const data = [
     id: 8,
     brand: "HRX",
     category: "T-Shirt",
+    size: "",
+
     price: 365,
     quantity: 1,
     photos: [

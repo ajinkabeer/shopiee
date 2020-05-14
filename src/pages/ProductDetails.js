@@ -27,6 +27,8 @@ const ProductDetails = ({ match }) => {
     );
   });
 
+  const product = products[0];
+
   return (
     <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
       <Grid divided="vertically">
@@ -36,12 +38,13 @@ const ProductDetails = ({ match }) => {
           </Grid.Column>
           <Grid.Column mobile={16} tablet={8} computer={8}>
             <ProductDetail
-              key={products[0].id}
-              photos={products[0].photos}
-              id={products[0].id}
-              brand={products[0].brand}
-              price={products[0].price}
-              category={products[0].category}
+              key={product.id}
+              photos={product.photos}
+              id={product.id}
+              brand={product.brand}
+              price={product.price}
+              category={product.category}
+              size={product.size}
             />
           </Grid.Column>
         </Grid.Row>
