@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1c8fbaad7dcb5c0882088f9c2f94d0df",
+    "revision": "4af6253800b0ced4c0a1352744d09b2a",
     "url": "/shopiee/index.html"
   },
   {
-    "revision": "153e5d354b6f9e629ddd",
+    "revision": "6ff512cd4f9ef96f4132",
     "url": "/shopiee/static/css/2.f1d36a8f.chunk.css"
   },
   {
-    "revision": "a72b1cfcc5633fbf99c4",
+    "revision": "fe1a52dffe34d310396b",
     "url": "/shopiee/static/css/main.fa88727d.chunk.css"
   },
   {
-    "revision": "153e5d354b6f9e629ddd",
-    "url": "/shopiee/static/js/2.54da2695.chunk.js"
+    "revision": "6ff512cd4f9ef96f4132",
+    "url": "/shopiee/static/js/2.b876b95b.chunk.js"
   },
   {
     "revision": "bc88dcf7f1f7b397ac4935f3607684e0",
-    "url": "/shopiee/static/js/2.54da2695.chunk.js.LICENSE.txt"
+    "url": "/shopiee/static/js/2.b876b95b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a72b1cfcc5633fbf99c4",
-    "url": "/shopiee/static/js/main.4d8152b4.chunk.js"
+    "revision": "fe1a52dffe34d310396b",
+    "url": "/shopiee/static/js/main.3cde1377.chunk.js"
   },
   {
     "revision": "efdbb8a018a6b204ecdc",
