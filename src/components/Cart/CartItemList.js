@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Image, List } from "semantic-ui-react";
+import { Button, Image, List, Label } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import {
   removeFromCart,
@@ -34,7 +34,8 @@ const CartItemList = ({ id, brand, photos, quantity, size }) => {
         </List.Content>
         <Image src={photos[0]} size="tiny" alt={brand} />
         <List.Content>
-          {brand}, {quantity} units, {size}
+          <Label>{brand} </Label> <Label>{quantity} units</Label>{" "}
+          <Label>{size}</Label>
         </List.Content>
       </List.Item>
     </List>
