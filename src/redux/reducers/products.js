@@ -4,6 +4,7 @@ const initialState = {
   products: "",
   cart: [],
   amount: "",
+  filteredProducts: "",
 };
 
 export default function authorReducer(state = initialState, action) {
@@ -50,6 +51,19 @@ export default function authorReducer(state = initialState, action) {
       return {
         ...state,
         cart: filteredCart,
+      };
+    }
+
+    case types.FILTER_ORDERS: {
+      let items;
+      if (action.payload === "price") {
+        items = state.products.concat().sort((a, b) => a.price - b.price);
+      } else {
+        items = state.products;
+      }
+      return {
+        ...state,
+        filteredProducts: items,
       };
     }
 

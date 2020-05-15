@@ -19,3 +19,7 @@ export function reduceOrderQuantity(data) {
 export function emptyCart(data) {
   return { type: types.EMPTY_CART, payload: data };
 }
+
+export function filterProducts(data) {
+  return { type: types.FILTER_ORDERS, payload: data };
+}

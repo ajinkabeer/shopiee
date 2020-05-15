@@ -1,18 +1,30 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { ProductCard } from "../components/Product/ProductCard";
 import { Card, Grid } from "semantic-ui-react";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
+import { filterProducts } from "../redux/actions/products";
+
+import Filter from "../components/Filter";
 
 const ProductList = () => {
-  const products = useSelector((state) => state.products.products);
+  const dispatch = useDispatch();
+  const [filter, setFilter] = useState("");
 
-  if (!products) {
+  const filteredProducts = useSelector(
+    (state) => state.products.filteredProducts
+  );
+
+  useEffect(() => {
+    dispatch(filterProducts(filter));
+  }, [filter]);
+
+  if (!filteredProducts) {
     return "Loading..";
   }
 
-  const renderProductCard = products.map((product) => {
+  const renderProductCard = filteredProducts.map((product) => {
     return (
       <ProductCard
         key={product.id}
@@ -28,9 +40,10 @@ const ProductList = () => {
 
   return (
     <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
-      <Grid columns={2} divided>
+      <Grid columns={3} divided>
         <Grid.Row>
           <Grid.Column mobile={16} tablet={8} computer={16}>
+            <Filter filter={{ filter: [setFilter] }} />
             <Card.Group
               mobile={16}
               tablet={8}
