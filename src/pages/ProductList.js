@@ -18,7 +18,7 @@ const ProductList = () => {
 
   useEffect(() => {
     dispatch(filterProducts(filter));
-  }, [filter]);
+  }, [filter, dispatch]);
 
   if (!filteredProducts) {
     return "Loading..";
