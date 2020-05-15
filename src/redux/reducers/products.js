@@ -55,12 +55,7 @@ export default function authorReducer(state = initialState, action) {
     }
 
     case types.FILTER_ORDERS: {
-      let items;
-      if (action.payload === "price") {
-        items = state.products.concat().sort((a, b) => a.price - b.price);
-      } else {
-        items = state.products;
-      }
+      let items = filterItems(action.payload, state);
       return {
         ...state,
         filteredProducts: items,
@@ -109,4 +104,14 @@ const findTotalAmount = (cart) => {
     .map((product) => product.price * product.quantity)
     .reduce((prev, next) => prev + next);
   return total;
+};
+
+const filterItems = (payload, state) => {
+  if (payload === "price-lh") {
+    return state.products.concat().sort((a, b) => a.price - b.price);
+  } else if (payload === "price-hl") {
+    return state.products.concat().sort((a, b) => b.price - a.price);
+  } else {
+    return state.products;
+  }
 };

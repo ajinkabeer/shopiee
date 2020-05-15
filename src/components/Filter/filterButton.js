@@ -8,9 +8,15 @@ const options = [
     value: "none",
   },
   {
-    key: "price",
+    key: "price-lh",
     text: "Price: Low to High",
-    value: "price",
+    value: "price-lh",
+  },
+
+  {
+    key: "price-hl",
+    text: "Price: High to Low",
+    value: "price-hl",
   },
 ];
 
