@@ -1,7 +1,8 @@
 import * as types from "../constants";
+import { data } from "../../data/products";
 
 const initialState = {
-  products: "",
+  products: data,
   cart: [],
   amount: "",
   filteredProducts: "",
