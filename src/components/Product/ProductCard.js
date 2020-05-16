@@ -1,29 +1,30 @@
 import React, { useState } from "react";
-import { Card, Image } from "semantic-ui-react";
 import { Redirect } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { addToCart } from "../../redux/actions/products";
-// import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/actions/products";
+import { toast } from "react-toastify";
+import "./css/card.css";
 
 const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
   const [redirect, setRedirect] = useState(false);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const addItemsToCart = () => {
-  //   const product = {
-  //     id,
-  //     photos,
-  //     brand,
-  //     category,
-  //     price,
-  //     quantity,
-  //   };
-  //   dispatch(addToCart(product));
-  //   toast(`Added ${brand} to cart`);
-  // };
+  const addItemsToCart = () => {
+    const product = {
+      id,
+      photos,
+      brand,
+      category,
+      price,
+      quantity,
+      size: "small",
+    };
+    dispatch(addToCart(product));
+    toast(`Added ${brand} to cart`);
+  };
 
   return (
-    <Card raised onClick={() => setRedirect(true)}>
+    <div className="card">
       {redirect && (
         <Redirect
           to={{
@@ -32,22 +33,28 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
           }}
         />
       )}
-      <Image
+      <img
         key={id}
         src={photos[0]}
-        size="small"
         wrapped
         ui={false}
         alt={brand}
+        onClick={() => setRedirect(true)}
       />
-      <Card.Content>
-        <Card.Header>{brand}</Card.Header>
-        <Card.Meta>
-          <span className="date">{category}</span>
-        </Card.Meta>
-        <Card.Description>Rs. {price.toLocaleString()}</Card.Description>
-      </Card.Content>
-    </Card>
+      <div className="card-container">
+        <h4>{brand}</h4>
+        <p>{category}</p>
+        <p>
+          <strong>Rs. {price.toLocaleString()}</strong>
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="add-to-cart" onClick={() => addItemsToCart()}>
+          <strong>Add to cart</strong>
+        </button>
+        <p>Available in all sizes</p>
+      </div>
+    </div>
   );
 };
 
