@@ -12,17 +12,22 @@ const filterButton = ({ ...props }) => {
 
   return (
     <>
-      <label for="filter-select">Filter by</label>
-      <select
-        id="filter-select"
-        className="filter"
-        onChange={handleChange}
-        style={{ marginBottom: 15 }}
-      >
-        <option value="none">None</option>
-        <option value="price-lh">Price: Low to High</option>
-        <option value="price-hl">Price: High to Low</option>
-      </select>
+      <label htmlFor="filter-select">
+        Filter by{" "}
+        <span>
+          {" "}
+          <select
+            id="filter-select"
+            className="filter"
+            onChange={handleChange}
+            style={{ marginBottom: 15 }}
+          >
+            <option value="none">None</option>
+            <option value="price-lh">Price: Low to High</option>
+            <option value="price-hl">Price: High to Low</option>
+          </select>
+        </span>
+      </label>
     </>
   );
 };
