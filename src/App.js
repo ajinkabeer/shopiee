@@ -7,8 +7,6 @@ import { ProductDetails } from "./pages/ProductDetails";
 import { Cart } from "./pages/Cart";
 import { OrderCompleted } from "./pages/OrderCompleted";
 import { addData } from "./redux/actions/products";
-
-import { Container } from "semantic-ui-react";
 import { AnimatePresence } from "framer-motion";
 import { data } from "./data/products";
 import { ToastContainer } from "react-toastify";
@@ -33,16 +31,14 @@ function App() {
       <div className="App">
         <Navigation />
         <main className="main-content">
-          <Container>
-            <AnimatePresence>
-              <Switch>
-                <Route exact path="/" component={ProductList} />
-                <Route path="/details/:slug" component={ProductDetails} />
-                <Route path="/cart" component={Cart} />
-                <Route path="/completed" component={OrderCompleted} />
-              </Switch>
-            </AnimatePresence>
-          </Container>
+          <AnimatePresence>
+            <Switch>
+              <Route exact path="/" component={ProductList} />
+              <Route path="/details/:slug" component={ProductDetails} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/completed" component={OrderCompleted} />
+            </Switch>
+          </AnimatePresence>
         </main>
         <ToastContainer
           autoClose={1000}
