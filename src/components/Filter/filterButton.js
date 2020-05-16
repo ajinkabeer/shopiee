@@ -1,45 +1,28 @@
 import React from "react";
-import { Dropdown } from "semantic-ui-react";
-
-const options = [
-  {
-    key: "none",
-    text: "None",
-    value: "none",
-  },
-  {
-    key: "price-lh",
-    text: "Price: Low to High",
-    value: "price-lh",
-  },
-
-  {
-    key: "price-hl",
-    text: "Price: High to Low",
-    value: "price-hl",
-  },
-];
+import "./css/main.css";
 
 const filterButton = ({ ...props }) => {
   const {
     filter: [setFilter],
   } = { ...props.filter };
 
-  const handleChange = (e, { value }) => {
-    setFilter(value);
+  const handleChange = (e) => {
+    setFilter(e.target.value);
   };
 
   return (
-    <span>
-      Filter by{" "}
-      <Dropdown
-        inline
-        options={options}
+    <>
+      <h3>Filter by</h3>
+      <select
+        className="filter"
         onChange={handleChange}
-        defaultValue={options[0].value}
         style={{ marginBottom: 15 }}
-      />
-    </span>
+      >
+        <option value="none">None</option>
+        <option value="price-lh">Price: Low to High</option>
+        <option value="price-hl">Price: High to Low</option>
+      </select>
+    </>
   );
 };
 
