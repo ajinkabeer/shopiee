@@ -19,7 +19,6 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
       size: "small",
     };
     dispatch(addToCart(product));
-    alert(`Added ${brand} to cart`);
   };
 
   return (

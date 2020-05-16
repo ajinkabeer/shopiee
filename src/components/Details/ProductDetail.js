@@ -9,6 +9,8 @@ import "./css/main.css";
 const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   let [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState(false);
+  const [added, setAdded] = useState(false);
+
   const dispatch = useDispatch();
 
   const addItemsToCart = () => {
@@ -25,7 +27,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
         size: selected,
       };
       dispatch(addToCart(product));
-      alert(`Added ${brand} to cart`);
+      setAdded(true);
     }
   };
 
@@ -59,6 +61,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
       <button className="add-to-cart-button" onClick={() => addItemsToCart()}>
         Add to cart
       </button>
+      {added && <pre>Added to cart</pre>}
       <Facts />
     </div>
   );

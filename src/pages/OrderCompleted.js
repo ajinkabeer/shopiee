@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { emptyCart } from "../redux/actions/products";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
+import checkLogo from "../assets/electronics.svg";
 
 const OrderCompleted = (props) => {
   const dispatch = useDispatch();
@@ -11,11 +12,18 @@ const OrderCompleted = (props) => {
   });
   return (
     <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
-      <h2 style={{ textAlign: "center" }}>
-        Thanks for shopping with us!
-        <br />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <img src={checkLogo} alt="success" style={{ width: "10%" }} />
+        <h2>Thanks for shopping with us!</h2>
         <button onClick={() => props.history.push("/")}>All Products</button>
-      </h2>
+      </div>
     </motion.div>
   );
 };
