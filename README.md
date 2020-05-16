@@ -1,13 +1,10 @@
-# Shopiee
+# Shopiee ![Deployment](https://github.com/ajinkabeer/shopiee/workflows/Deployment/badge.svg?branch=master)
 
-![Deployment](https://github.com/ajinkabeer/shopiee/workflows/Deployment/badge.svg?branch=master)
+A simple E-Commerce app built using react.
 
-## Built with
+![Alt text](src/assets/lighthouse.PNG "lightouse")
 
-- React.js
-- Redux
-
-## Production Statistics
+## Production build
 
 File sizes after gzip
 
@@ -18,10 +15,6 @@ File sizes after gzip
 | 1.72 KB  | build\static\css\2.f1d36a8f.chunk.csss   |
 | 1.49 KB  | build\static\js\runtime-main.fdb4f543.js |
 | 1.3 KB   | build\static\css\main.76a3d61b.chunk.css |
-
-## Lighthouse score
-
-![Alt text](src/assets/lighthouse.PNG "lightouse")
 
 ## Authors
 
