@@ -12,8 +12,9 @@ const filterButton = ({ ...props }) => {
 
   return (
     <>
-      <h3>Filter by</h3>
+      <label for="filter-select">Filter by</label>
       <select
+        id="filter-select"
         className="filter"
         onChange={handleChange}
         style={{ marginBottom: 15 }}
