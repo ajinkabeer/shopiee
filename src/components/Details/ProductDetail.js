@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
-import { toast } from "react-toastify";
 import Select from "./Sizes";
 import Facts from "./Facts";
 
@@ -14,7 +13,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
 
   const addItemsToCart = () => {
     if (!selected) {
-      toast.warning("Please select a size");
+      alert.warning("Please select a size");
     } else {
       const product = {
         id,
@@ -26,7 +25,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
         size: selected,
       };
       dispatch(addToCart(product));
-      toast(`Added ${brand} to cart`);
+      alert(`Added ${brand} to cart`);
     }
   };
 

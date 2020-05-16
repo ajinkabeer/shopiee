@@ -5,8 +5,7 @@ import { Home } from "./pages/Home";
 import { Cart } from "./pages/Cart";
 import { OrderCompleted } from "./pages/OrderCompleted";
 import { AnimatePresence } from "framer-motion";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import "./css/app.css";
 
 const Products = lazy(() => import("./pages/ProductList"));
@@ -30,11 +29,6 @@ function App() {
             </Suspense>
           </AnimatePresence>
         </main>
-        <ToastContainer
-          autoClose={1000}
-          hideProgressBar
-          position={"bottom-right"}
-        />
       </div>
     </>
   );

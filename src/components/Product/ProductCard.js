@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
-import { toast } from "react-toastify";
 import "./css/card.css";
 
 const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
@@ -20,7 +19,7 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
       size: "small",
     };
     dispatch(addToCart(product));
-    toast(`Added ${brand} to cart`);
+    alert(`Added ${brand} to cart`);
   };
 
   return (
