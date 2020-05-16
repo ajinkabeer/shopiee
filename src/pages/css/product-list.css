@@ -3,3 +3,9 @@
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+
+.grid-container-cart {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+}

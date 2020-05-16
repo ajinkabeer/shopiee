@@ -25,17 +25,15 @@ const Cart = (props) => {
 
   return (
     <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
-      <div className="grid-container">
+      <div className="grid-container-cart">
         <div>
           <Headers quantity={quantity} cart={cart} />
           <CartItems cart={cart} />
         </div>
-        <div>
-          <ProductDescription
-            onButtonClick={() => onButtonClick()}
-            quantity={quantity}
-          />
-        </div>
+        <ProductDescription
+          onButtonClick={() => onButtonClick()}
+          quantity={quantity}
+        />
       </div>
     </motion.div>
   );

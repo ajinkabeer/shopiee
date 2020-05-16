@@ -26,13 +26,17 @@ const CartItemList = ({ id, brand, photos, quantity, size }) => {
     <div className="product-container">
       <img src={photos[0]} size="tiny" alt={brand} />
 
-      <div style={{ display: "flex" }}>
+      <div>
         <label>
-          <strong>{brand}</strong>{" "}
+          <strong>{brand}</strong>
         </label>
-        <label>, {quantity} units</label>
         <label>
-          , <strong>{size.toUpperCase()}</strong>
+          <strong>Quantity: </strong>
+          {quantity} units
+        </label>
+        <label>
+          <strong>Size: </strong>
+          {size}
         </label>
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
