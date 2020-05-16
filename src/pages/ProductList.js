@@ -47,4 +47,4 @@ const ProductList = () => {
   );
 };
 
-export { ProductList };
+export default ProductList;

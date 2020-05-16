@@ -48,4 +48,4 @@ const ProductDetails = ({ match }) => {
   );
 };
 
-export { ProductDetails };
+export default ProductDetails;
