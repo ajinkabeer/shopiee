@@ -1,30 +1,31 @@
 {
   "files": {
     "main.css": "/shopiee/static/css/main.28dc05f3.chunk.css",
-    "main.js": "/shopiee/static/js/main.67d37085.chunk.js",
-    "main.js.map": "/shopiee/static/js/main.67d37085.chunk.js.map",
-    "runtime-main.js": "/shopiee/static/js/runtime-main.b7e1168c.js",
-    "runtime-main.js.map": "/shopiee/static/js/runtime-main.b7e1168c.js.map",
-    "static/js/2.65216e86.chunk.js": "/shopiee/static/js/2.65216e86.chunk.js",
-    "static/js/2.65216e86.chunk.js.map": "/shopiee/static/js/2.65216e86.chunk.js.map",
+    "main.js": "/shopiee/static/js/main.dc52a74b.chunk.js",
+    "main.js.map": "/shopiee/static/js/main.dc52a74b.chunk.js.map",
+    "runtime-main.js": "/shopiee/static/js/runtime-main.69909a60.js",
+    "runtime-main.js.map": "/shopiee/static/js/runtime-main.69909a60.js.map",
+    "static/js/2.3c3aca1e.chunk.js": "/shopiee/static/js/2.3c3aca1e.chunk.js",
+    "static/js/2.3c3aca1e.chunk.js.map": "/shopiee/static/js/2.3c3aca1e.chunk.js.map",
     "static/css/3.9b9c2c34.chunk.css": "/shopiee/static/css/3.9b9c2c34.chunk.css",
-    "static/js/3.2255980d.chunk.js": "/shopiee/static/js/3.2255980d.chunk.js",
-    "static/js/3.2255980d.chunk.js.map": "/shopiee/static/js/3.2255980d.chunk.js.map",
+    "static/js/3.efee67c1.chunk.js": "/shopiee/static/js/3.efee67c1.chunk.js",
+    "static/js/3.efee67c1.chunk.js.map": "/shopiee/static/js/3.efee67c1.chunk.js.map",
     "static/css/4.e16e6432.chunk.css": "/shopiee/static/css/4.e16e6432.chunk.css",
-    "static/js/4.d8c60e6a.chunk.js": "/shopiee/static/js/4.d8c60e6a.chunk.js",
-    "static/js/4.d8c60e6a.chunk.js.map": "/shopiee/static/js/4.d8c60e6a.chunk.js.map",
+    "static/js/4.b6d6d603.chunk.js": "/shopiee/static/js/4.b6d6d603.chunk.js",
+    "static/js/4.b6d6d603.chunk.js.map": "/shopiee/static/js/4.b6d6d603.chunk.js.map",
     "index.html": "/shopiee/index.html",
-    "precache-manifest.db115b149cd7c1c39a5310b7445e56b9.js": "/shopiee/precache-manifest.db115b149cd7c1c39a5310b7445e56b9.js",
+    "precache-manifest.e1867e2935dc787b6e15a2c2d63a73a7.js": "/shopiee/precache-manifest.e1867e2935dc787b6e15a2c2d63a73a7.js",
     "service-worker.js": "/shopiee/service-worker.js",
     "static/css/3.9b9c2c34.chunk.css.map": "/shopiee/static/css/3.9b9c2c34.chunk.css.map",
     "static/css/4.e16e6432.chunk.css.map": "/shopiee/static/css/4.e16e6432.chunk.css.map",
     "static/css/main.28dc05f3.chunk.css.map": "/shopiee/static/css/main.28dc05f3.chunk.css.map",
-    "static/js/2.65216e86.chunk.js.LICENSE.txt": "/shopiee/static/js/2.65216e86.chunk.js.LICENSE.txt"
+    "static/js/2.3c3aca1e.chunk.js.LICENSE.txt": "/shopiee/static/js/2.3c3aca1e.chunk.js.LICENSE.txt",
+    "static/media/electronics.svg": "/shopiee/static/media/electronics.acfc70fd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b7e1168c.js",
-    "static/js/2.65216e86.chunk.js",
+    "static/js/runtime-main.69909a60.js",
+    "static/js/2.3c3aca1e.chunk.js",
     "static/css/main.28dc05f3.chunk.css",
-    "static/js/main.67d37085.chunk.js"
+    "static/js/main.dc52a74b.chunk.js"
   ]
 }
