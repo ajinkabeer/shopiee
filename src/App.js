@@ -1,31 +1,16 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Navigation } from "./components/Navigation/Navigation";
 import { ProductList } from "./pages/ProductList";
 import { ProductDetails } from "./pages/ProductDetails";
 import { Cart } from "./pages/Cart";
 import { OrderCompleted } from "./pages/OrderCompleted";
-import { addData } from "./redux/actions/products";
 import { AnimatePresence } from "framer-motion";
-import { data } from "./data/products";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./css/app.css";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(addData(data));
-  });
-
-  const products = useSelector((state) => state.products.products);
-
-  if (!products) {
-    return "Loading..";
-  }
-
   return (
     <>
       <div className="App">

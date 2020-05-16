@@ -3,7 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { ProductCard } from "../components/Product/ProductCard";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
-import { filterProducts } from "../redux/actions/products";
+import { filterProducts, addData } from "../redux/actions/products";
+
+import { data } from "../data/products";
 import "./css/product-list.css";
 
 import Filter from "../components/Filter";
@@ -11,10 +13,13 @@ import Filter from "../components/Filter";
 const ProductList = () => {
   const dispatch = useDispatch();
   const [filter, setFilter] = useState("");
-
   const filteredProducts = useSelector(
     (state) => state.products.filteredProducts
   );
+
+  useEffect(() => {
+    dispatch(addData(data));
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(filterProducts(filter));
