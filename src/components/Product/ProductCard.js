@@ -36,8 +36,6 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
       <img
         key={id}
         src={photos[0]}
-        wrapped
-        ui={false}
         alt={brand}
         onClick={() => setRedirect(true)}
       />
@@ -48,8 +46,8 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
           <strong>Rs. {price.toLocaleString()}</strong>
         </p>
       </div>
-      <div class="button-container">
-        <button class="add-to-cart" onClick={() => addItemsToCart()}>
+      <div className="button-container">
+        <button className="add-to-cart" onClick={() => addItemsToCart()}>
           <strong>Add to cart</strong>
         </button>
         <p>Available in all sizes</p>

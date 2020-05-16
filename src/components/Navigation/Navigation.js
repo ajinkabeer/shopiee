@@ -1,11 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { Label, Menu, Icon } from "semantic-ui-react";
+// import { useSelector } from "react-redux";
 import "./Navigation.css";
 
 const Navigation = () => {
-  const cartItems = useSelector((state) => state.products.cart);
+  // const cartItems = useSelector((state) => state.products.cart);
 
   return (
     <header className="main-navigation">
@@ -19,17 +18,7 @@ const Navigation = () => {
           </li>
 
           <li>
-            <NavLink to="/cart">
-              {" "}
-              <Menu compact>
-                <Menu.Item as="a">
-                  <Icon name="cart" />
-                  <Label color="red" floating>
-                    {cartItems.length}
-                  </Label>
-                </Menu.Item>
-              </Menu>
-            </NavLink>
+            <NavLink to="/cart"> Cart</NavLink>
           </li>
         </ul>
       </nav>
