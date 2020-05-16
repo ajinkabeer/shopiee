@@ -52,3 +52,13 @@
   display: none;
   padding: 1px 1px;
 }
+
+.image-container {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.image-container img {
+  width: 100%;
+}

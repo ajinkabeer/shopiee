@@ -29,7 +29,7 @@ export const data = [
   },
   {
     id: 3,
-    brand: "HRX",
+    brand: "HRX by Hrithik Roshan",
     category: "T-Shirt",
     size: "",
 

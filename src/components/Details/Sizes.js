@@ -1,12 +1,5 @@
 import React from "react";
-import { Select } from "semantic-ui-react";
-
-const sizes = [
-  { key: "s", value: "Small", text: "Small" },
-  { key: "m", value: "Medium", text: "Medium" },
-  { key: "l", value: "Large", text: "Large" },
-  { key: "xl", value: "Extra Large", text: "Extra Large" },
-];
+import "./css/main.css";
 
 const Sizes = ({ ...props }) => {
   const {
@@ -15,17 +8,18 @@ const Sizes = ({ ...props }) => {
     ...props.selected,
   };
 
-  const handleChange = (e, { value }) => {
-    setSelected(value);
+  const handleChange = (e) => {
+    setSelected(e.target.value);
   };
 
   return (
-    <Select
-      placeholder="Select your size"
-      options={sizes}
-      onChange={handleChange}
-      style={{ marginLeft: 10, marginBottom: 20 }}
-    />
+    <select className="select-size" onChange={handleChange}>
+      <option value="select">Select your size</option>
+      <option value="s">Small</option>
+      <option value="m">Medium</option>
+      <option value="l">Large</option>
+      <option value="xl">Extra Large</option>
+    </select>
   );
 };
 export default Sizes;

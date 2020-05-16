@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Button, Header, Divider, Segment, Statistic } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
 import { toast } from "react-toastify";
 import Select from "./Sizes";
 import Facts from "./Facts";
-import Delivery from "./DeliveryOptions";
+
+import "./css/main.css";
 
 const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   let [quantity, setQuantity] = useState(1);
@@ -31,41 +31,32 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   };
 
   return (
-    <Segment>
-      <Header as="h2">{brand}</Header>
-      <Header as="h4">{category}</Header>
-      <Divider />
-      <Statistic
-        label={"Price"}
-        value={`₹ ${price}`}
-        horizontal
-        size="tiny"
-        color="orange"
-      />
-      <Statistic
-        label="Quantity"
-        color="orange"
-        horizontal
-        size="tiny"
-        value={quantity}
-      />
-      <br />
-      <Button.Group>
-        <Button onClick={() => setQuantity(quantity + 1)}>+</Button>
-        <Button
-          onClick={() => (quantity >= 2 ? setQuantity(quantity - 1) : null)}
-        >
-          -
-        </Button>
-      </Button.Group>
+    <div>
+      <h2>{brand}</h2>
+      <p className="category-heading">{`Men Black Solid ${category}`} </p>
+      <h2>Rs. {price} </h2>
+      <pre>inclusive of all taxes</pre>
+      <label>Select size</label>
       <Select selected={{ selected: [setSelected] }} />
-      <Button positive fluid onClick={() => addItemsToCart()}>
-        Add
-      </Button>
-      <Delivery />
+      <label>Quantity {quantity}</label>
 
+      <button
+        className="quantity-counter-button"
+        onClick={() => setQuantity(quantity + 1)}
+      >
+        +
+      </button>
+      <button
+        className="quantity-counter-button"
+        onClick={() => (quantity >= 2 ? setQuantity(quantity - 1) : null)}
+      >
+        -
+      </button>
+      <button className="add-to-cart-button" onClick={() => addItemsToCart()}>
+        Add to cart
+      </button>
       <Facts />
-    </Segment>
+    </div>
   );
 };
 

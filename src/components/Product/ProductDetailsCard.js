@@ -1,26 +1,14 @@
 import React from "react";
-import { Image, Grid } from "semantic-ui-react";
+import "./css/card.css";
 
 const ProductDetailsCard = ({ photos }) => {
   return (
-    <>
-      <Grid divided="vertically">
-        <Grid.Row columns={2} style={{ marginTop: 13 }}>
-          <Grid.Column>
-            <Image src={photos[0]} alt="product-photo-1" />
-          </Grid.Column>
-          <Grid.Column>
-            <Image src={photos[1]} alt="product-photo-2" />
-          </Grid.Column>
-          <Grid.Column>
-            <Image src={photos[2]} alt="product-photo-3" />
-          </Grid.Column>
-          <Grid.Column>
-            <Image src={photos[3]} alt="product-photo-4" />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </>
+    <div class="image-container">
+      <img src={photos[0]} alt="product-1" />
+      <img src={photos[1]} alt="product-2" />
+      <img src={photos[2]} alt="product-3" />
+      <img src={photos[3]} alt="product-4" />
+    </div>
   );
 };
 
