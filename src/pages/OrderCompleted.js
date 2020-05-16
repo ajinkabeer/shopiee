@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { emptyCart } from "../redux/actions/products";
 import { Animation } from "../components/Completed/Animation";
-import { Header, Button } from "semantic-ui-react";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
 
@@ -14,11 +13,11 @@ const OrderCompleted = (props) => {
   return (
     <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
       <Animation />
-      <Header as="h2" textAlign="center">
+      <h2 style={{ textAlign: "center" }}>
         Thanks for shopping with us!
         <br />
-        <Button onClick={() => props.history.push("/")}>All Products</Button>
-      </Header>
+        <button onClick={() => props.history.push("/")}>All Products</button>
+      </h2>
     </motion.div>
   );
 };

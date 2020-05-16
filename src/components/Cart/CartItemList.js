@@ -1,10 +1,11 @@
 import React from "react";
-import { Button, Image, List, Label } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import {
   removeFromCart,
   reduceOrderQuantity,
 } from "../../redux/actions/products";
+
+import "./css/main.css";
 
 const CartItemList = ({ id, brand, photos, quantity, size }) => {
   const dispatch = useDispatch();
@@ -22,23 +23,27 @@ const CartItemList = ({ id, brand, photos, quantity, size }) => {
   };
 
   return (
-    <List divided verticalAlign="middle">
-      <List.Item>
-        <List.Content floated="right">
-          <Button
-            onClick={() => (quantity === 0 ? removeItem() : reduceQuantity())}
-          >
-            -
-          </Button>
-          <Button onClick={() => removeItem()}>Remove</Button>
-        </List.Content>
-        <Image src={photos[0]} size="tiny" alt={brand} />
-        <List.Content>
-          <Label>{brand} </Label> <Label>{quantity} units</Label>{" "}
-          <Label>{size}</Label>
-        </List.Content>
-      </List.Item>
-    </List>
+    <div className="product-container">
+      <img src={photos[0]} size="tiny" alt={brand} />
+
+      <div style={{ display: "flex" }}>
+        <label>
+          <strong>{brand}</strong>{" "}
+        </label>
+        <label>, {quantity} units</label>
+        <label>
+          , <strong>{size.toUpperCase()}</strong>
+        </label>
+      </div>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <button
+          onClick={() => (quantity === 0 ? removeItem() : reduceQuantity())}
+        >
+          Reduce
+        </button>
+        <button onClick={() => removeItem()}>Remove</button>
+      </div>
+    </div>
   );
 };
 

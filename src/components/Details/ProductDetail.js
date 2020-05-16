@@ -36,9 +36,14 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
       <p className="category-heading">{`Men Black Solid ${category}`} </p>
       <h2>Rs. {price} </h2>
       <pre>inclusive of all taxes</pre>
-      <label>Select size</label>
+      <label>
+        <strong>Select size</strong>
+      </label>
       <Select selected={{ selected: [setSelected] }} />
-      <label>Quantity {quantity}</label>
+      <label>
+        <strong>Quantity </strong>
+        {quantity}
+      </label>
 
       <button
         className="quantity-counter-button"

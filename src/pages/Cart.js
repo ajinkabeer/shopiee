@@ -3,10 +3,9 @@ import { useSelector } from "react-redux";
 import { CartItems } from "../components/Cart/CartItems";
 import { Headers } from "../components/Cart/Headers";
 import { ProductDescription } from "../components/Cart/ProductDescription";
-import Message from "../components/Message";
-import { Button, Grid } from "semantic-ui-react";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
+import "./css/product-list.css";
 
 const Cart = (props) => {
   const cart = useSelector((state) => state.products.cart);
@@ -15,8 +14,8 @@ const Cart = (props) => {
   if (cart.length === 0) {
     return (
       <>
-        <Message message={"There's nothing in your cart."} />
-        <Button onClick={() => props.history.push("/")}>All products</Button>
+        <p>There's nothing in your cart</p>
+        <button onClick={() => props.history.push("/")}>All products</button>
       </>
     );
   }
@@ -26,23 +25,19 @@ const Cart = (props) => {
 
   return (
     <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
-      <Grid columns={2} divided>
-        <Grid.Row>
-          <Grid.Column mobile={16} tablet={8} computer={8}>
-            <Headers quantity={quantity} cart={cart} />
-            <br />
-            <br />
-            <CartItems cart={cart} />
-          </Grid.Column>
-          <Grid.Column mobile={16} tablet={8} computer={8}>
-            <Message message={"You are eligible for a discount"} />
-            <ProductDescription
-              onButtonClick={() => onButtonClick()}
-              quantity={quantity}
-            />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <div className="grid-container">
+        <div>
+          <Headers quantity={quantity} cart={cart} />
+          <CartItems cart={cart} />
+        </div>
+        <div>
+          <p>You are eligible for a discount</p>
+          <ProductDescription
+            onButtonClick={() => onButtonClick()}
+            quantity={quantity}
+          />
+        </div>
+      </div>
     </motion.div>
   );
 };
