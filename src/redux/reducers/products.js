@@ -46,11 +46,12 @@ export default function authorReducer(state = initialState, action) {
 
     case types.REMOVE_FROM_CART: {
       const filteredCart = state.cart.filter(
-        (product) => product.id !== action.payload
+        (product) => product.id !== action.payload.id
       );
       return {
         ...state,
         cart: filteredCart,
+        amount: state.amount - action.payload.price,
       };
     }
 

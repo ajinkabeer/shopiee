@@ -7,7 +7,7 @@ import {
 
 import "./css/main.css";
 
-const CartItemList = ({ id, brand, photos, quantity, size }) => {
+const CartItemList = ({ id, brand, photos, quantity, size, price }) => {
   const dispatch = useDispatch();
 
   const reduceQuantity = () => {
@@ -19,7 +19,7 @@ const CartItemList = ({ id, brand, photos, quantity, size }) => {
   };
 
   const removeItem = () => {
-    dispatch(removeFromCart(id));
+    dispatch(removeFromCart({ id, price }));
   };
 
   return (
