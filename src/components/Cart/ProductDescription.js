@@ -4,15 +4,19 @@ import { useSelector } from "react-redux";
 const ProductDescription = ({ onButtonClick }) => {
   const totalAmount = useSelector((state) => state.products.amount);
   return (
-    <>
-      <label>Rs. {totalAmount}</label>
-      <label>Total Amount</label>
+    <div className="product-description-container">
+      <h3>Price Details</h3>
+      <div className="total-label-container">
+        <label>Total Amount</label>
+        <label>Rs. {totalAmount}</label>
+      </div>
 
-      <label>Rs. {Math.floor(Math.random() * 100) + 1}</label>
-      <label>Eligible Discount</label>
-
+      <div className="total-label-container">
+        <label>Eligible Discount</label>
+        <label>Rs. {Math.floor(Math.random() * 100) + 1}</label>
+      </div>
       <button onClick={onButtonClick}>Checkout</button>
-    </>
+    </div>
   );
 };
 

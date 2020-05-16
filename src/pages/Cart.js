@@ -31,7 +31,6 @@ const Cart = (props) => {
           <CartItems cart={cart} />
         </div>
         <div>
-          <p>You are eligible for a discount</p>
           <ProductDescription
             onButtonClick={() => onButtonClick()}
             quantity={quantity}
