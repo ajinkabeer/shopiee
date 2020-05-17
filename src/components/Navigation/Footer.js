@@ -15,12 +15,7 @@ const Footer = () => {
           <pre>Essentials</pre>
           <pre>Gift cards</pre>
         </div>
-        <div>
-          <p>Useful links</p>
-          <pre>Contact us</pre>
-          <pre>FAQ</pre>
-          <pre>T&C</pre>
-        </div>
+
         <div>
           <p>Experience app on mobile</p>
           <img src={playstoreLogo} alt="playstore" />
