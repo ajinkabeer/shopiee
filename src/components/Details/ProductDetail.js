@@ -15,7 +15,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
 
   const addItemsToCart = () => {
     if (!selected) {
-      alert.warning("Please select a size");
+      alert("Please select a size");
     } else {
       const product = {
         id,

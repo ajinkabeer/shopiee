@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Navigation } from "./components/Navigation/Navigation";
+import { Footer } from "./components/Navigation/Footer";
 import { Cart } from "./pages/Cart";
 import { OrderCompleted } from "./pages/OrderCompleted";
 import { AnimatePresence } from "framer-motion";
@@ -13,8 +14,8 @@ const ProductDetails = lazy(() => import("./pages/ProductDetails"));
 function App() {
   return (
     <>
+      <Navigation />
       <div className="App">
-        <Navigation />
         <main className="main-content">
           <AnimatePresence>
             <Suspense fallback={<div>Loading..</div>}>
@@ -28,6 +29,7 @@ function App() {
           </AnimatePresence>
         </main>
       </div>
+      <Footer />
     </>
   );
 }

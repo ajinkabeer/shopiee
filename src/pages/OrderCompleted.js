@@ -10,6 +10,7 @@ const OrderCompleted = (props) => {
   useEffect(() => {
     dispatch(emptyCart(""));
   });
+
   return (
     <motion.div initial="out" exit="out" animate="in" variants={pageTransition}>
       <div
