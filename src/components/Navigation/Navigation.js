@@ -1,10 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "./Navigation.css";
 
 const Navigation = () => {
-  // const cartItems = useSelector((state) => state.products.cart);
+  const cartItems = useSelector((state) => state.products.cart);
 
   return (
     <header className="main-navigation">
@@ -16,8 +16,11 @@ const Navigation = () => {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
-            <NavLink to="/cart"> Cart</NavLink>
+          <li className="cart-items">
+            <NavLink to="/cart">
+              {" "}
+              Cart {cartItems.length === 0 ? null : cartItems.length}
+            </NavLink>
           </li>
         </ul>
       </nav>

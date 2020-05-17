@@ -10,13 +10,15 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   let [quantity, setQuantity] = useState(1);
   const [selected, setSelected] = useState(false);
   const [added, setAdded] = useState(false);
+  const [sizeNotSelected, setSizeNotSelected] = useState(false);
 
   const dispatch = useDispatch();
 
   const addItemsToCart = () => {
     if (!selected) {
-      alert("Please select a size");
+      setSizeNotSelected(true);
     } else {
+      setSizeNotSelected(false);
       const product = {
         id,
         photos,
@@ -62,6 +64,7 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
         Add to cart
       </button>
       {added && <pre>Added to cart</pre>}
+      {sizeNotSelected && <pre>Please select a size</pre>}
       <Facts />
     </div>
   );
