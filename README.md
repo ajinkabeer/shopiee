@@ -2,7 +2,7 @@
 
 A simple E-Commerce app built using react.
 
-![Alt text](src/assets/lighthouse.PNG "lightouse")
+![Alt text](src/assets/light.PNG "lightouse")
 
 ## Production build
 
