@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/shopiee/static/css/main.3fee2bd8.chunk.css",
-    "main.js": "/shopiee/static/js/main.749913bb.chunk.js",
-    "main.js.map": "/shopiee/static/js/main.749913bb.chunk.js.map",
+    "main.js": "/shopiee/static/js/main.e08d044c.chunk.js",
+    "main.js.map": "/shopiee/static/js/main.e08d044c.chunk.js.map",
     "runtime-main.js": "/shopiee/static/js/runtime-main.9dac0495.js",
     "runtime-main.js.map": "/shopiee/static/js/runtime-main.9dac0495.js.map",
     "static/js/2.98cb21ba.chunk.js": "/shopiee/static/js/2.98cb21ba.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/4.657c738c.chunk.js": "/shopiee/static/js/4.657c738c.chunk.js",
     "static/js/4.657c738c.chunk.js.map": "/shopiee/static/js/4.657c738c.chunk.js.map",
     "index.html": "/shopiee/index.html",
-    "precache-manifest.2e3fd91d476ac9f5c7caad352b2c7d4c.js": "/shopiee/precache-manifest.2e3fd91d476ac9f5c7caad352b2c7d4c.js",
+    "precache-manifest.ac722b827cbc83d735d6956eb687c0f6.js": "/shopiee/precache-manifest.ac722b827cbc83d735d6956eb687c0f6.js",
     "service-worker.js": "/shopiee/service-worker.js",
     "static/css/3.9b9c2c34.chunk.css.map": "/shopiee/static/css/3.9b9c2c34.chunk.css.map",
     "static/css/4.e16e6432.chunk.css.map": "/shopiee/static/css/4.e16e6432.chunk.css.map",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.9dac0495.js",
     "static/js/2.98cb21ba.chunk.js",
     "static/css/main.3fee2bd8.chunk.css",
-    "static/js/main.749913bb.chunk.js"
+    "static/js/main.e08d044c.chunk.js"
   ]
 }
