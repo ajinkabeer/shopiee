@@ -70,4 +70,4 @@ const ProductDetail = ({ id, photos, brand, price, category, size }) => {
   );
 };
 
-export { ProductDetail };
+export default React.memo(ProductDetail);

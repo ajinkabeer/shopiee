@@ -1,6 +1,7 @@
 import React from "react";
-import { CartItemList } from "./CartItemList";
+import CartItemList from "./CartItemList";
 import { useSelector } from "react-redux";
+
 const CartItems = () => {
   const cart = useSelector((state) => state.products.cart);
 
@@ -26,4 +27,4 @@ const CartItems = () => {
   return <> {renderCartItems} </>;
 };
 
-export { CartItems };
+export default React.memo(CartItems);

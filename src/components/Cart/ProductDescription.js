@@ -20,4 +20,4 @@ const ProductDescription = ({ onButtonClick }) => {
   );
 };
 
-export { ProductDescription };
+export default React.memo(ProductDescription);

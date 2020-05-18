@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { ProductCard } from "../components/Product/ProductCard";
+import ProductCard from "../components/Product/ProductCard";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
 import { filterProducts } from "../redux/actions/products";

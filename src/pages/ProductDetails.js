@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { ProductDetailsCard } from "../components/Product/ProductDetailsCard";
-import { ProductDetail } from "../components/Details/ProductDetail";
+import ProductDetailsCard from "../components/Product/ProductDetailsCard";
+import ProductDetail from "../components/Details/ProductDetail";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
 

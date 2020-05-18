@@ -5,4 +5,4 @@ const Filter = ({ ...props }) => {
   return <FilterButton {...props} />;
 };
 
-export default Filter;
+export default React.memo(Filter);

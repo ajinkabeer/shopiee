@@ -12,4 +12,4 @@ const ProductDetailsCard = ({ photos }) => {
   );
 };
 
-export { ProductDetailsCard };
+export default React.memo(ProductDetailsCard);

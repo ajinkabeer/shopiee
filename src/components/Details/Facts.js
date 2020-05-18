@@ -31,4 +31,4 @@ const Facts = () => (
   </div>
 );
 
-export default Facts;
+export default React.memo(Facts);

@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { CartItems } from "../components/Cart/CartItems";
-import { Headers } from "../components/Cart/Headers";
-import { ProductDescription } from "../components/Cart/ProductDescription";
+import CartItems from "../components/Cart/CartItems";
+import Headers from "../components/Cart/Headers";
+import ProductDescription from "../components/Cart/ProductDescription";
 import { motion } from "framer-motion";
 import { pageTransition } from "../assets/pageTransition";
 import "./css/product-list.css";

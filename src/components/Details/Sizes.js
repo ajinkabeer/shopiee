@@ -22,4 +22,4 @@ const Sizes = ({ ...props }) => {
     </select>
   );
 };
-export default Sizes;
+export default React.memo(Sizes);

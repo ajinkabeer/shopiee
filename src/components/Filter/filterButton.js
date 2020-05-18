@@ -32,4 +32,4 @@ const filterButton = ({ ...props }) => {
   );
 };
 
-export default filterButton;
+export default React.memo(filterButton);

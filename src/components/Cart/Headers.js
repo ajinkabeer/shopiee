@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 const Headers = ({ cart }) => {
   const totalAmount = useSelector((state) => state.products.amount);
-  console.log(totalAmount);
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
       <h3>My shopping bag ({cart.length} Items)</h3>
@@ -12,4 +11,4 @@ const Headers = ({ cart }) => {
   );
 };
 
-export { Headers };
+export default React.memo(Headers);
