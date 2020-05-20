@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/actions/products";
+import { Toast } from "react-lite-toast";
+
 import "./css/card.css";
+import "react-lite-toast/dist/index.css";
 
 const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
   const [redirect, setRedirect] = useState(false);
   const dispatch = useDispatch();
+  const [toast, setToast] = useState(false);
 
   const addItemsToCart = () => {
     const product = {
@@ -18,6 +22,7 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
       quantity,
       size: "small",
     };
+    setToast(true);
     dispatch(addToCart(product));
   };
 
@@ -52,6 +57,15 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
           <p>Available in all sizes</p>
         </div>
       </div>
+      {toast && (
+        <Toast
+          type="success"
+          title="Completed"
+          description="Flippity flip"
+          position="bottomup"
+          duration={1500}
+        />
+      )}
     </>
   );
 };

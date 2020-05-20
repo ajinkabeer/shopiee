@@ -8743,6 +8743,11 @@ react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-i
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-lite-toast@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-lite-toast/-/react-lite-toast-1.0.6.tgz#339c180f2f9472fcbd7a908f164d4bb1852821d0"
+  integrity sha512-D05Ac+yhAqoe7zHQnbyJbv0SV4RUbc+Q9RUaNrTpK7+rbC/s7rQncm+P5hHX95phukC/bUQxuYWc7vVCpv3uPg==
+
 react-redux@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-7.2.0.tgz#f970f62192b3981642fec46fd0db18a074fe879d"
