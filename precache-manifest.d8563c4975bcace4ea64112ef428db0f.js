@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c8a6d386ef119eaed92f689f0519cd3",
+    "revision": "2b0da29d258499705cdc4efcbb54cc6a",
     "url": "/shopiee/index.html"
   },
   {
-    "revision": "4944b74366f80cfb89c3",
-    "url": "/shopiee/static/css/3.04a046dc.chunk.css"
+    "revision": "7c3394f39ec28cfb41fe",
+    "url": "/shopiee/static/css/3.b5f901f0.chunk.css"
   },
   {
     "revision": "99b132e4e69921062ac1",
     "url": "/shopiee/static/css/4.7919364b.chunk.css"
   },
   {
-    "revision": "e64087a9bec2f0af4850",
-    "url": "/shopiee/static/css/main.3fee2bd8.chunk.css"
+    "revision": "a0bc1de185f53b639d60",
+    "url": "/shopiee/static/css/main.12f67c4c.chunk.css"
   },
   {
     "revision": "4828db597766b42e2369",
@@ -24,20 +24,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopiee/static/js/2.992e8f64.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4944b74366f80cfb89c3",
-    "url": "/shopiee/static/js/3.dd158e99.chunk.js"
+    "revision": "7c3394f39ec28cfb41fe",
+    "url": "/shopiee/static/js/3.89387a53.chunk.js"
   },
   {
     "revision": "99b132e4e69921062ac1",
     "url": "/shopiee/static/js/4.fe3aa744.chunk.js"
   },
   {
-    "revision": "e64087a9bec2f0af4850",
+    "revision": "a0bc1de185f53b639d60",
     "url": "/shopiee/static/js/main.1f9af781.chunk.js"
   },
   {
-    "revision": "6537356506784f5819ee",
-    "url": "/shopiee/static/js/runtime-main.da744043.js"
+    "revision": "16d61cb3f4f81bb88695",
+    "url": "/shopiee/static/js/runtime-main.33a1b619.js"
   },
   {
     "revision": "dd336c6e68a11591e13a1db214ac002f",
@@ -60,7 +60,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopiee/static/media/info~YHVUvgRi.b87fd673.svg"
   },
   {
-    "revision": "d085d83665c75ffdc05a6c11ebbeae3c",
-    "url": "/shopiee/static/media/warning~LrCINTNk.d085d836.svg"
+    "revision": "87127918dcedab18a6252d68de2235d9",
+    "url": "/shopiee/static/media/warning~kxHVRSgn.87127918.svg"
   }
 ]);
