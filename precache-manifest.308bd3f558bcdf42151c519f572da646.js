@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b0da29d258499705cdc4efcbb54cc6a",
+    "revision": "d72c6a3522271b53ade8fe12593ca669",
     "url": "/shopiee/index.html"
   },
   {
-    "revision": "7c3394f39ec28cfb41fe",
+    "revision": "66b9693b94f6388ca786",
     "url": "/shopiee/static/css/3.b5f901f0.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopiee/static/js/2.992e8f64.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c3394f39ec28cfb41fe",
-    "url": "/shopiee/static/js/3.89387a53.chunk.js"
+    "revision": "66b9693b94f6388ca786",
+    "url": "/shopiee/static/js/3.df1d7dd6.chunk.js"
   },
   {
     "revision": "99b132e4e69921062ac1",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopiee/static/js/main.1f9af781.chunk.js"
   },
   {
-    "revision": "16d61cb3f4f81bb88695",
-    "url": "/shopiee/static/js/runtime-main.33a1b619.js"
+    "revision": "a13e9540b6150068398f",
+    "url": "/shopiee/static/js/runtime-main.239f1704.js"
   },
   {
     "revision": "dd336c6e68a11591e13a1db214ac002f",
@@ -52,15 +52,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopiee/static/media/electronics.acfc70fd.svg"
   },
   {
-    "revision": "941d14a27e7e50b58df5884c3ed95289",
-    "url": "/shopiee/static/media/error~oAuuRnLQ.941d14a2.svg"
+    "revision": "513689e05e29c130fd8ee0eca2e024a4",
+    "url": "/shopiee/static/media/error~zjOHyWYD.513689e0.svg"
   },
   {
-    "revision": "b87fd673d55447a27db4bcd8fe0ca7bb",
-    "url": "/shopiee/static/media/info~YHVUvgRi.b87fd673.svg"
+    "revision": "e29000e4aa1a8cf52587c2a1a127b368",
+    "url": "/shopiee/static/media/info~sjcFLtKK.e29000e4.svg"
   },
   {
-    "revision": "87127918dcedab18a6252d68de2235d9",
-    "url": "/shopiee/static/media/warning~kxHVRSgn.87127918.svg"
+    "revision": "867d9da5026fc2991230594e5424ac7b",
+    "url": "/shopiee/static/media/warning~hSZlsaWd.867d9da5.svg"
   }
 ]);
