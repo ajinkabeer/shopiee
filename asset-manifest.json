@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/shopiee/static/css/main.12f67c4c.chunk.css",
-    "main.js": "/shopiee/static/js/main.baf28844.chunk.js",
-    "main.js.map": "/shopiee/static/js/main.baf28844.chunk.js.map",
+    "main.css": "/shopiee/static/css/main.1cb31bcd.chunk.css",
+    "main.js": "/shopiee/static/js/main.1329b099.chunk.js",
+    "main.js.map": "/shopiee/static/js/main.1329b099.chunk.js.map",
     "runtime-main.js": "/shopiee/static/js/runtime-main.539a1754.js",
     "runtime-main.js.map": "/shopiee/static/js/runtime-main.539a1754.js.map",
-    "static/js/2.acb034f2.chunk.js": "/shopiee/static/js/2.acb034f2.chunk.js",
-    "static/js/2.acb034f2.chunk.js.map": "/shopiee/static/js/2.acb034f2.chunk.js.map",
+    "static/js/2.a6209d78.chunk.js": "/shopiee/static/js/2.a6209d78.chunk.js",
+    "static/js/2.a6209d78.chunk.js.map": "/shopiee/static/js/2.a6209d78.chunk.js.map",
     "static/css/3.b5f901f0.chunk.css": "/shopiee/static/css/3.b5f901f0.chunk.css",
     "static/js/3.00bca209.chunk.js": "/shopiee/static/js/3.00bca209.chunk.js",
     "static/js/3.00bca209.chunk.js.map": "/shopiee/static/js/3.00bca209.chunk.js.map",
@@ -14,12 +14,12 @@
     "static/js/4.f149328a.chunk.js": "/shopiee/static/js/4.f149328a.chunk.js",
     "static/js/4.f149328a.chunk.js.map": "/shopiee/static/js/4.f149328a.chunk.js.map",
     "index.html": "/shopiee/index.html",
-    "precache-manifest.ddb693d78495d2faaf331f811663f47a.js": "/shopiee/precache-manifest.ddb693d78495d2faaf331f811663f47a.js",
+    "precache-manifest.3454ed1f5db0f5fe42cce6c1426a7407.js": "/shopiee/precache-manifest.3454ed1f5db0f5fe42cce6c1426a7407.js",
     "service-worker.js": "/shopiee/service-worker.js",
     "static/css/3.b5f901f0.chunk.css.map": "/shopiee/static/css/3.b5f901f0.chunk.css.map",
     "static/css/4.7919364b.chunk.css.map": "/shopiee/static/css/4.7919364b.chunk.css.map",
-    "static/css/main.12f67c4c.chunk.css.map": "/shopiee/static/css/main.12f67c4c.chunk.css.map",
-    "static/js/2.acb034f2.chunk.js.LICENSE.txt": "/shopiee/static/js/2.acb034f2.chunk.js.LICENSE.txt",
+    "static/css/main.1cb31bcd.chunk.css.map": "/shopiee/static/css/main.1cb31bcd.chunk.css.map",
+    "static/js/2.a6209d78.chunk.js.LICENSE.txt": "/shopiee/static/js/2.a6209d78.chunk.js.LICENSE.txt",
     "static/media/check~YAqNKjRx.svg": "/shopiee/static/media/check~YAqNKjRx.dd336c6e.svg",
     "static/media/close~CpoGlLRi.svg": "/shopiee/static/media/close~CpoGlLRi.210e4fc0.svg",
     "static/media/electronics.svg": "/shopiee/static/media/electronics.acfc70fd.svg",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.539a1754.js",
-    "static/js/2.acb034f2.chunk.js",
-    "static/css/main.12f67c4c.chunk.css",
-    "static/js/main.baf28844.chunk.js"
+    "static/js/2.a6209d78.chunk.js",
+    "static/css/main.1cb31bcd.chunk.css",
+    "static/js/main.1329b099.chunk.js"
   ]
 }
