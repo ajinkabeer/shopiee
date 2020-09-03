@@ -30,10 +30,7 @@ const Cart = (props) => {
           <Headers quantity={quantity} cart={cart} />
           <CartItems cart={cart} />
         </div>
-        <ProductDescription
-          onButtonClick={() => onButtonClick()}
-          quantity={quantity}
-        />
+        <ProductDescription onButtonClick={onButtonClick} quantity={quantity} />
       </div>
     </motion.div>
   );

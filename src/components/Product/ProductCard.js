@@ -60,8 +60,8 @@ const ProductCard = ({ id, photos, brand, category, price, quantity }) => {
       {toast && (
         <Toast
           type="success"
-          title="Completed"
-          description="Flippity flip"
+          title="Added to cart"
+          description={brand}
           position="bottomup"
           duration={1500}
         />
